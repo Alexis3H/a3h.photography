@@ -3,6 +3,34 @@
 ## Project Overview
 Rebuild of a3h.photography from Pixpa to a modern, SEO-optimized platform while preserving core client gallery functionality.
 
+## Current Website Analysis (Pixpa Platform)
+
+### Current State Assessment
+**Website**: [https://www.a3h.photography/](https://www.a3h.photography/)
+**Platform**: Pixpa
+**Language**: French (Switzerland-based)
+**Location**: Morges – Nyon – Lausanne area
+
+### Current Services & Features
+- **Headshots**: Professional portraits for LinkedIn, CV & teams with coaching and natural retouching
+- **Restaurants**: Food photography for menus, social media, delivery platforms
+- **Private Events**: Birthdays, baptisms, parties with authentic moments and warm ambiance
+- **Express Delivery**: J+0/J+1 for headshots and portraits
+- **Mobile Studio**: On-location photography capability
+- **Private Galleries**: Basic client gallery functionality
+- **Contact Form**: Lead generation and client communication
+
+### Current Brand Messaging
+- **Tagline**: "Montrez le meilleur de vous-même — et de votre marque" (Show the best of yourself — and your brand)
+- **Value Proposition**: Warm accompaniment, natural retouching, fast delivery
+- **Differentiators**: Express delivery, mobile studio, private galleries
+
+### Technical Limitations (Pixpa)
+- **SEO Control**: Limited control over robots.txt, meta tags, structured data
+- **Performance**: Dependent on Pixpa's infrastructure
+- **Customization**: Restricted by platform limitations
+- **Cost**: Monthly subscription without full control
+
 ## Requirements Summary
 - **Budget**: $20/month maximum
 - **Client Galleries**: ~20 active galleries (1 year duration each)
@@ -29,6 +57,7 @@ Rebuild of a3h.photography from Pixpa to a modern, SEO-optimized platform while 
 - **UI Components**: Radix UI or Headless UI
 - **Image Optimization**: Next.js Image component + Cloudinary
 - **SEO**: Next-SEO, structured data
+- **Internationalization**: French/English bilingual support (i18n)
 
 ### Backend & Database
 - **Database**: Supabase (PostgreSQL)
@@ -45,11 +74,15 @@ Rebuild of a3h.photography from Pixpa to a modern, SEO-optimized platform while 
 ## Core Features
 
 ### Public Website
-- **Homepage**: Hero section, portfolio preview, about section
-- **Portfolio**: Organized photo galleries with categories
-- **About**: Professional bio and contact information
-- **Contact**: Contact form with email integration
-- **SEO**: Meta tags, structured data, robots.txt, sitemap
+- **Homepage**: Hero section with tagline "Montrez le meilleur de vous-même — et de votre marque", service overview, portfolio preview
+- **Services**: 
+  - Headshots (LinkedIn, CV, teams with coaching)
+  - Restaurants (food photography for menus, social media, delivery)
+  - Private Events (birthdays, baptisms, parties)
+- **Portfolio**: Organized photo galleries showcasing all three service categories
+- **About**: Professional bio highlighting Morges – Nyon – Lausanne location and mobile studio capability
+- **Contact**: Contact form with email integration, emphasizing express delivery (J+0/J+1)
+- **SEO**: Meta tags, structured data, robots.txt, sitemap with full control
 
 ### Client Galleries (Private)
 - **Access Control**: Password-protected galleries
@@ -93,35 +126,52 @@ Rebuild of a3h.photography from Pixpa to a modern, SEO-optimized platform while 
 
 ## Development Phases
 
-### Phase 1: Core Website (Week 1-2)
+### Phase 1: Core Website
 - Set up Next.js project with Tailwind CSS
 - Create homepage, portfolio, about, contact pages
 - Implement responsive design
 - Set up SEO optimization
 
-### Phase 2: Client Gallery System (Week 3-4)
+### Phase 2: Client Gallery System
 - Set up Supabase database and storage
 - Create gallery creation and management system
 - Implement password protection
 - Build photo viewing and download functionality
 
-### Phase 3: Admin Panel (Week 5-6)
+### Phase 3: Admin Panel
 - Create admin dashboard
 - Implement bulk photo upload
 - Add gallery management features
 - Set up analytics
 
-### Phase 4: Testing & Optimization (Week 7-8)
+### Phase 4: Testing & Optimization
 - Performance optimization
 - SEO testing and validation
 - Security testing
 - User acceptance testing
 
 ## Migration Strategy
-1. **Content Migration**: Export existing content from Pixpa
-2. **Photo Migration**: Download and re-upload photos to Supabase
-3. **DNS Update**: Point domain to new Vercel deployment
-4. **Testing**: Verify all functionality works correctly
+
+### Content Migration from Current Site
+1. **Service Pages**: Migrate headshots, restaurants, and events service descriptions
+2. **Brand Assets**: Preserve tagline "Montrez le meilleur de vous-même — et de votre marque"
+3. **Contact Information**: Maintain Morges – Nyon – Lausanne location details
+4. **Portfolio Images**: Export and optimize existing portfolio photos
+5. **Value Propositions**: Preserve express delivery (J+0/J+1) and mobile studio messaging
+
+### Technical Migration
+1. **Language Support**: Implement French/English bilingual support
+2. **SEO Enhancement**: Add full control over robots.txt, meta tags, structured data
+3. **Performance Optimization**: Achieve < 3 seconds load time vs. current Pixpa performance
+4. **Gallery Upgrade**: Enhance from basic private galleries to password-protected system with expiration
+5. **DNS Update**: Point domain to new Vercel deployment
+6. **Testing**: Verify all functionality works correctly
+
+### Content Strategy Updates
+- **Enhanced SEO**: Add structured data for photography services
+- **Improved UX**: Modern responsive design with better navigation
+- **Client Portal**: Upgrade gallery system with password protection and expiration
+- **Analytics**: Implement proper tracking and performance monitoring
 
 ## Success Metrics
 - **Page Load Speed**: < 3 seconds
