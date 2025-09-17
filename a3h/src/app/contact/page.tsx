@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import Navigation from '@/components/Navigation';
-import Image from 'next/image';
 import Button from '@/components/Button';
 import FlexibleImageContainer from '../../../components/FlexibleImageContainer';
 import { loadContactContent } from '../../lib/content';
@@ -55,7 +53,7 @@ export default function Contact() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">{content.sections.info.title}</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {content.sections.info.items.map((item: any, index: number) => (
+          {content.sections.info.items.map((item: Record<string, any>, index: number) => (
             <div key={index} className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center">
               <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
               <p className="text-gray-600 mb-6">{item.description}</p>

@@ -23,7 +23,7 @@ export function loadContactContent() {
   }
 }
 
-export function loadPageContent(page: string) {
+export function loadPageContent(page: string): Record<string, any> | null {
   try {
     const contentPath = path.join(process.cwd(), 'src', 'content', `${page}.json`);
     const content = fs.readFileSync(contentPath, 'utf8');

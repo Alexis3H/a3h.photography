@@ -11,7 +11,7 @@ interface ImageInputProps {
 }
 
 export default function ImageInput({ value, onChange, placeholder, label }: ImageInputProps) {
-  const [images, setImages] = useState<any[]>([]);
+  const [images, setImages] = useState<Record<string, any>[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [isUploading, setIsUploading] = useState(false);

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
-import ImageGrid from '../../components/ImageGrid';
 import ServiceCard from '../../components/ServiceCard';
 import FeatureImage from '../../components/FeatureImage';
 import FlexibleImageContainer from '../../components/FlexibleImageContainer';

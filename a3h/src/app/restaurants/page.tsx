@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Navigation from '@/components/Navigation';
-import Image from 'next/image';
+import Link from &apos;next/link&apos;;
+import Navigation from &apos;@/components/Navigation&apos;;
+import Image from &apos;next/image&apos;;
 
 export default function Restaurants() {
   return (
@@ -66,7 +66,7 @@ export default function Restaurants() {
           <div className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">MENU Starter</h3>
             <p className="text-lg text-gray-700 mb-4">390 CHF (-2 h)</p>
-            <p className="text-gray-600 mb-6">Jusqu'à 10 plats stylisés + 5 visuels du lieu/équipe, 30-40 images web.</p>
+            <p className="text-gray-600 mb-6">Jusqu&apos;à 10 plats stylisés + 5 visuels du lieu/équipe, 30-40 images web.</p>
             <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-blue-700 transition-colors mt-auto">
               Réserver
             </Link>
@@ -75,7 +75,7 @@ export default function Restaurants() {
           <div className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">CARTE Complète</h3>
             <p className="text-lg text-gray-700 mb-4">690 CHF (½ journée)</p>
-            <p className="text-gray-600 mb-6">20-30 plats + ambiance + portraits d'équipe, 60-80 images, set optimisé pour UberEats/Smood.</p>
+            <p className="text-gray-600 mb-6">20-30 plats + ambiance + portraits d&apos;équipe, 60-80 images, set optimisé pour UberEats/Smood.</p>
             <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-blue-700 transition-colors mt-auto">
               Réserver
             </Link>
@@ -104,7 +104,7 @@ export default function Restaurants() {
           </ul>
           <p className="text-xl font-bold text-gray-900 mb-6">390 CHF / mois</p>
           <Link href="/contact" className="bg-gray-900 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-gray-800 transition-colors">
-            S'abonner
+            S&apos;abonner
           </Link>
         </div>
         <div className="md:w-1/2 h-96 bg-gray-100 rounded-lg overflow-hidden">
