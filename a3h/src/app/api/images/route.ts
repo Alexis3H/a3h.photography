@@ -5,12 +5,14 @@ import { existsSync } from 'fs';
 
 export async function GET() {
   try {
-    // Try multiple possible paths
+    // Try multiple possible paths for different environments
     const possiblePaths = [
-      join(process.cwd(), 'a3h', 'public', 'uploads'),
       join(process.cwd(), 'public', 'uploads'),
+      join(process.cwd(), 'a3h', 'public', 'uploads'),
       join(__dirname, '..', '..', '..', '..', 'public', 'uploads'),
-      join(process.cwd(), 'src', '..', '..', 'public', 'uploads')
+      join(process.cwd(), 'src', '..', '..', 'public', 'uploads'),
+      '/var/task/public/uploads', // Vercel Lambda path
+      '/tmp/public/uploads' // Alternative Vercel path
     ];
     
     let uploadsDir = '';
