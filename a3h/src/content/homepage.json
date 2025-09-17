@@ -1,0 +1,145 @@
+{
+  "page": "homepage",
+  "title": "A3H Photography - Des images qui ouvrent l'appétit",
+  "sections": {
+    "hero": {
+      "layout": "heroGrid",
+      "label": "OFFRE RESTAURANTS",
+      "title": "Des images qui ouvrent l'appétit",
+      "description": "De belles photos de vos plats et de votre ambiance augmentent vos réservations et donnent confiance à vos clients. Je vous accompagne de la carte aux réseaux sociaux.",
+      "primaryButton": {
+        "text": "Découvrir les packs",
+        "href": "#offres"
+      },
+      "secondaryButton": {
+        "text": "Demander une offre",
+        "href": "/contact"
+      },
+      "images": [
+        {
+          "src": "/P3010418.jpg",
+          "alt": "Photographie culinaire",
+          "position": "top-left",
+          "colSpan": 1,
+          "focusPoint": "51.16666666666667% 48.5%",
+          "size": "medium",
+          "zoom": 0.7
+        },
+        {
+          "src": "/_DSF1983.jpg",
+          "alt": "Plats stylisés",
+          "position": "top-right",
+          "colSpan": 1,
+          "focusPoint": "center",
+          "size": "medium",
+          "zoom": 2.2
+        },
+        {
+          "src": "/_DSC4658.jpg",
+          "alt": "Ambiance restaurant",
+          "position": "bottom-full",
+          "colSpan": 2,
+          "focusPoint": "49.5% 66%",
+          "size": "full",
+          "zoom": 1
+        }
+      ]
+    },
+    "services": {
+      "title": "Nos formules",
+      "cards": [
+        {
+          "title": "MENU Starter",
+          "price": "390 CHF (-2 h)",
+          "description": "Jusqu'à 10 plats stylisés + 5 visuels du lieu/équipe, 30-40 images web.",
+          "image": {
+            "src": "/DSCF3687.jpg",
+            "alt": "Menu Starter",
+            "focusPoint": "center",
+            "zoom": 1
+          },
+          "button": {
+            "text": "Réserver",
+            "href": "/contact"
+          }
+        },
+        {
+          "title": "CARTE Complète",
+          "price": "690 CHF (½ journée)",
+          "description": "20-30 plats + ambiance + portraits d'équipe, 60-80 images, set optimisé pour UberEats/Smood.",
+          "image": {
+            "src": "/DSCF3898.jpg",
+            "alt": "Carte Complète",
+            "focusPoint": "center",
+            "zoom": 1
+          },
+          "button": {
+            "text": "Réserver",
+            "href": "/contact"
+          }
+        },
+        {
+          "title": "JOURNÉE Brand",
+          "price": "1090 CHF (journée)",
+          "description": "Storytelling cuisine + salle + détails + portraits, 100-140 images harmonisées.",
+          "image": {
+            "src": "/DSCF6573.jpg",
+            "alt": "Journée Brand",
+            "focusPoint": "center",
+            "zoom": 1
+          },
+          "button": {
+            "text": "Réserver",
+            "href": "/contact"
+          }
+        }
+      ]
+    },
+    "social": {
+      "layout": "featureImage",
+      "title": "Formule Social « Miam »",
+      "description": "Un accompagnement mensuel pour alimenter vos réseaux avec régularité.",
+      "features": [
+        "1 session photo mensuelle de 2 h",
+        "10 photos retouchées",
+        "2 micro-reels 6-10 s (vertical)"
+      ],
+      "price": "390 CHF / mois",
+      "button": {
+        "text": "S'abonner",
+        "href": "/contact"
+      },
+      "image": {
+        "src": "/_DSC5340.jpg",
+        "alt": "Formule Social Miam"
+      }
+    },
+    "process": {
+      "title": "Comment ça marche ?",
+      "steps": [
+        {
+          "title": "Brief",
+          "description": "On échange sur vos plats phares et votre identité."
+        },
+        {
+          "title": "Shooting",
+          "description": "Je me déplace avec studio mobile et lumière adaptée."
+        },
+        {
+          "title": "Livraison",
+          "description": "Galerie privée + fichiers optimisés web & apps."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Parlons de votre restaurant",
+      "description": "Envoyez-moi vos besoins — je vous réponds sous 24 h.",
+      "placeholder": "Votre message...",
+      "button": {
+        "text": "Envoyer",
+        "href": "#"
+      },
+      "legal": "En soumettant, vous acceptez les CGV et la politique de confidentialité."
+    }
+  }
+}

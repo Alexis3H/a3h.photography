@@ -1,0 +1,87 @@
+{
+  "heroGrid": {
+    "name": "Hero Image Grid",
+    "description": "2x2 grid layout for hero sections",
+    "gridTemplate": "grid-cols-2",
+    "gap": "gap-4",
+    "positions": [
+      {
+        "id": "top-left",
+        "classes": "col-span-1 h-40",
+        "description": "Small square image, top left"
+      },
+      {
+        "id": "top-right", 
+        "classes": "col-span-1 h-40",
+        "description": "Small square image, top right"
+      },
+      {
+        "id": "bottom-full",
+        "classes": "col-span-2 h-60",
+        "description": "Large landscape image, bottom row"
+      }
+    ]
+  },
+  "serviceCard": {
+    "name": "Service Card Image",
+    "description": "Single image for service cards",
+    "gridTemplate": "single",
+    "gap": "gap-0",
+    "positions": [
+      {
+        "id": "card-image",
+        "classes": "w-full h-48 object-cover rounded-lg mb-4",
+        "description": "Medium image for service cards"
+      }
+    ]
+  },
+  "featureImage": {
+    "name": "Feature Section Image",
+    "description": "Large image for feature sections",
+    "gridTemplate": "single",
+    "gap": "gap-0", 
+    "positions": [
+      {
+        "id": "feature-large",
+        "classes": "h-96 rounded-lg overflow-hidden",
+        "description": "Large image for feature sections"
+      }
+    ]
+  },
+  "portfolioGrid": {
+    "name": "Portfolio Image Grid",
+    "description": "3-column grid for portfolio galleries",
+    "gridTemplate": "grid-cols-3",
+    "gap": "gap-6",
+    "positions": [
+      {
+        "id": "portfolio-item",
+        "classes": "h-64",
+        "description": "Portfolio grid item"
+      }
+    ]
+  },
+  "contactGrid": {
+    "name": "Contact Section Grid",
+    "description": "2x2 grid for contact sections",
+    "gridTemplate": "grid-cols-2",
+    "gap": "gap-4",
+    "positions": [
+      {
+        "id": "contact-small-1",
+        "classes": "col-span-1 h-40",
+        "description": "Small contact image 1"
+      },
+      {
+        "id": "contact-small-2",
+        "classes": "col-span-1 h-40", 
+        "description": "Small contact image 2"
+      },
+      {
+        "id": "contact-large",
+        "classes": "col-span-2 h-60",
+        "description": "Large contact image"
+      }
+    ]
+  }
+}
