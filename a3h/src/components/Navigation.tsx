@@ -4,19 +4,37 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { getMenuItems } from '../lib/menuManager';
 
+// Default menu items for SSR
+const DEFAULT_MENU_ITEMS = [
+  { id: 'homepage', name: 'Accueil', path: '/' },
+  { id: 'headshots', name: 'Headshots', path: '/headshots' },
+  { id: 'restaurants', name: 'Restaurants', path: '/restaurants' },
+  { id: 'evenements', name: 'Événements', path: '/evenements' },
+  { id: 'contact', name: 'Contact', path: '/contact' }
+];
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [menuItems, setMenuItems] = useState(getMenuItems());
+  const [menuItems, setMenuItems] = useState(DEFAULT_MENU_ITEMS);
+  const [isClient, setIsClient] = useState(false);
+  
+  // Handle client-side hydration
+  useEffect(() => {
+    setIsClient(true);
+    setMenuItems(getMenuItems());
+  }, []);
   
   // Listen for menu updates
   useEffect(() => {
+    if (!isClient) return;
+    
     const handleMenuUpdate = () => {
       setMenuItems(getMenuItems());
     };
 
     window.addEventListener('menuUpdated', handleMenuUpdate);
     return () => window.removeEventListener('menuUpdated', handleMenuUpdate);
-  }, []);
+  }, [isClient]);
 
   return (
     <nav className="bg-white shadow-sm border-b">

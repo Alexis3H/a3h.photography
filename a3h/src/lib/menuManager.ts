@@ -9,8 +9,6 @@ const DEFAULT_MENU_ITEMS: MenuItem[] = [
   { id: 'headshots', name: 'Headshots', path: '/headshots' },
   { id: 'restaurants', name: 'Restaurants', path: '/restaurants' },
   { id: 'evenements', name: 'Événements', path: '/evenements' },
-  { id: 'portfolio', name: 'Portfolio', path: '/portfolio' },
-  { id: 'about', name: 'À propos', path: '/about' },
   { id: 'contact', name: 'Contact', path: '/contact' }
 ];
 
@@ -18,29 +16,15 @@ const DEFAULT_MENU_ITEMS: MenuItem[] = [
 let menuCache: MenuItem[] | null = null;
 
 export function getMenuItems(): MenuItem[] {
+  // Always return default items for SSR to prevent hydration mismatch
   if (typeof window === 'undefined') {
-    return DEFAULT_MENU_ITEMS; // Server-side rendering
+    return DEFAULT_MENU_ITEMS;
   }
   
-  // Return cache if available
-  if (menuCache) {
-    return menuCache;
-  }
-  
-  const cachedMenuTitles = localStorage.getItem('a3h-menu-titles');
-  if (cachedMenuTitles) {
-    try {
-      menuCache = JSON.parse(cachedMenuTitles);
-      return menuCache;
-    } catch (error) {
-      console.error('Error parsing cached menu titles:', error);
-      menuCache = DEFAULT_MENU_ITEMS;
-      return menuCache;
-    }
-  }
-  
+  // Clear any old cache and return current default items
   menuCache = DEFAULT_MENU_ITEMS;
-  return menuCache;
+  localStorage.setItem('a3h-menu-titles', JSON.stringify(DEFAULT_MENU_ITEMS));
+  return DEFAULT_MENU_ITEMS;
 }
 
 export function updateMenuCache(newMenuItems: MenuItem[]) {
@@ -57,4 +41,7 @@ export function updateMenuCache(newMenuItems: MenuItem[]) {
 
 export function clearMenuCache() {
   menuCache = null;
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem('a3h-menu-titles');
+  }
 }

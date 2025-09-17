@@ -12,12 +12,22 @@
       "description": "Vous avez un projet photographique ? Contactez-moi pour discuter de vos besoins. Je vous réponds sous 24h.",
       "images": [
         {
-          "src": "/contact-hero.jpg",
+          "src": "/uploads/collage 3.png",
           "alt": "Contact A3H Photography",
           "focusPoint": "center",
           "zoom": 1
         }
-      ]
+      ],
+      "primaryButton": {
+        "text": "Contact",
+        "type": "section",
+        "sectionId": "#form"
+      },
+      "secondaryButton": {
+        "text": "Appeler",
+        "type": "phone",
+        "phone": "+41786610086"
+      }
     },
     "contactForm": {
       "title": "Parlons de votre projet",

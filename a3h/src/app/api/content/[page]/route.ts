@@ -4,10 +4,11 @@ import path from 'path';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { page: string } }
+  { params }: { params: Promise<{ page: string }> }
 ) {
   try {
-    const contentPath = path.join(process.cwd(), 'src', 'content', `${params.page}.json`);
+    const { page } = await params;
+    const contentPath = path.join(process.cwd(), 'src', 'content', `${page}.json`);
     const content = fs.readFileSync(contentPath, 'utf8');
     return NextResponse.json(JSON.parse(content));
   } catch (error) {
@@ -17,11 +18,12 @@ export async function GET(
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { page: string } }
+  { params }: { params: Promise<{ page: string }> }
 ) {
   try {
+    const { page } = await params;
     const body = await request.json();
-    const contentPath = path.join(process.cwd(), 'src', 'content', `${params.page}.json`);
+    const contentPath = path.join(process.cwd(), 'src', 'content', `${page}.json`);
     
     // Write content back to file
     fs.writeFileSync(contentPath, JSON.stringify(body, null, 2));

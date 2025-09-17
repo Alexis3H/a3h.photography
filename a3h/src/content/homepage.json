@@ -9,21 +9,23 @@
       "layout": "heroGrid",
       "layoutType": "collage",
       "singleOrientation": "landscape",
-      "collageLayout": "layout2",
+      "collageLayout": "layout1",
       "label": "Photographe à Morges et la Côte pour headshots, restaurants et événements",
       "title": "Montrez le meilleur de vous-même — et de votre marque",
       "description": "Headshots et portraits qui ouvrent des portes, photos culinaires qui donnent faim, souvenirs d’événements qui restent. Accompagnement chaleureux, retouches naturelles, livraison rapide.\n\nLivraison J+0/J+1 • Studio mobile • Galeries privées",
       "primaryButton": {
         "text": "Découvrir les packs",
-        "href": "#offres"
+        "type": "section",
+        "sectionId": "#services"
       },
       "secondaryButton": {
         "text": "Demander une offre",
+        "type": "link",
         "href": "/contact"
       },
       "images": [
         {
-          "src": "/_DSC4658.jpg",
+          "src": "/uploads/1758133648941_P9140145.jpg",
           "alt": "Photographie culinaire",
           "position": "top-left",
           "colSpan": 1,
@@ -32,7 +34,7 @@
           "zoom": 1
         },
         {
-          "src": "/_DSF1983.jpg",
+          "src": "/uploads/1758133689844__DSC6459.jpg",
           "alt": "Plats stylisés",
           "position": "top-right",
           "colSpan": 1,

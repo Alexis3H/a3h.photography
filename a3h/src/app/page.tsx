@@ -4,6 +4,7 @@ import ImageGrid from '../../components/ImageGrid';
 import ServiceCard from '../../components/ServiceCard';
 import FeatureImage from '../../components/FeatureImage';
 import FlexibleImageContainer from '../../components/FlexibleImageContainer';
+import Button from '@/components/Button';
 import { loadHomepageContent } from '../../lib/content';
 
 export default function Home() {
@@ -28,12 +29,24 @@ export default function Home() {
             {content.sections.hero.description}
           </p>
           <div className="flex space-x-4">
-            <Link href={content.sections.hero.primaryButton.href} className="bg-gray-900 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-gray-800 transition-colors">
-              {content.sections.hero.primaryButton.text}
-            </Link>
-            <Link href={content.sections.hero.secondaryButton.href} className="border border-gray-300 text-gray-700 px-6 py-3 rounded-md text-base font-medium hover:bg-gray-100 transition-colors">
-              {content.sections.hero.secondaryButton.text}
-            </Link>
+            <Button
+              text={content.sections.hero.primaryButton.text}
+              type={content.sections.hero.primaryButton.type || 'link'}
+              href={content.sections.hero.primaryButton.href}
+              sectionId={content.sections.hero.primaryButton.sectionId}
+              phone={content.sections.hero.primaryButton.phone}
+              email={content.sections.hero.primaryButton.email}
+              variant="primary"
+            />
+            <Button
+              text={content.sections.hero.secondaryButton.text}
+              type={content.sections.hero.secondaryButton.type || 'link'}
+              href={content.sections.hero.secondaryButton.href}
+              sectionId={content.sections.hero.secondaryButton.sectionId}
+              phone={content.sections.hero.secondaryButton.phone}
+              email={content.sections.hero.secondaryButton.email}
+              variant="secondary"
+            />
           </div>
         </div>
         <div className="md:w-1/2">
@@ -47,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* Section 2: Services */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">{content.sections.services.title}</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {content.sections.services.cards.map((card, index) => (
@@ -64,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Formule Social « Miam » */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
+      <section id="social" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{content.sections.social.title}</h2>
           <p className="text-lg text-gray-700 mb-6">{content.sections.social.description}</p>
@@ -87,7 +100,7 @@ export default function Home() {
       </section>
 
       {/* Section 4: Comment ça marche ? */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section id="process" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">{content.sections.process.title}</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {content.sections.process.steps.map((step, index) => (
@@ -100,7 +113,7 @@ export default function Home() {
       </section>
 
       {/* Section 5: Parlons de votre restaurant (Contact Form) */}
-      <section className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 rounded-t-lg">
+      <section id="contact" className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 rounded-t-lg">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{content.sections.contact.title}</h2>
           <p className="text-lg mb-8">{content.sections.contact.description}</p>
