@@ -1,0 +1,66 @@
+{
+  "page": "about",
+  "title": "À Propos - A3H Photography",
+  "menuTitle": "À propos",
+  "seoTitle": "À Propos A3H Photography - Photographe Professionnel Morges Nyon Lausanne",
+  "seoDescription": "Découvrez A3H Photography, photographe professionnel basé dans la région Morges-Nyon-Lausanne. Spécialisé dans les headshots, photographie culinaire et événements privés.",
+  "sections": {
+    "hero": {
+      "layoutType": "single",
+      "singleOrientation": "portrait",
+      "title": "À propos",
+      "description": "Photographe professionnel basé dans la région Morges – Nyon – Lausanne, je me spécialise dans le portrait professionnel, la photographie culinaire et les événements privés.",
+      "images": [
+        {
+          "src": "/about-photo.jpg",
+          "alt": "A3H Photography",
+          "focusPoint": "center",
+          "zoom": 1
+        }
+      ]
+    },
+    "story": {
+      "title": "Mon histoire",
+      "content": "Passionné par la photographie depuis plus de 10 ans, j'ai développé une approche bienveillante et professionnelle pour capturer l'authenticité de chaque moment. Spécialisé dans le portrait professionnel, la photographie culinaire et les événements privés, je m'adapte à chaque projet avec créativité et expertise technique."
+    },
+    "values": {
+      "title": "Mes valeurs",
+      "items": [
+        {
+          "title": "Authenticité",
+          "description": "Je capture les moments naturels et authentiques, sans artifice."
+        },
+        {
+          "title": "Bienveillance",
+          "description": "Un accompagnement chaleureux et rassurant pour tous mes clients."
+        },
+        {
+          "title": "Qualité",
+          "description": "Des images de haute qualité, retouchées avec soin et professionnalisme."
+        },
+        {
+          "title": "Rapidité",
+          "description": "Livraison express (J+0/J+1) pour répondre à vos besoins urgents."
+        }
+      ]
+    },
+    "services": {
+      "title": "Mes services",
+      "description": "Basé dans la région Morges – Nyon – Lausanne, je me déplace avec mon studio mobile pour vous accompagner dans tous vos projets photographiques.",
+      "items": [
+        "Headshots professionnels pour LinkedIn, CV et équipes",
+        "Photographie culinaire pour restaurants et réseaux sociaux",
+        "Événements privés : anniversaires, baptêmes, fêtes de famille",
+        "Studio mobile et accompagnement personnalisé"
+      ]
+    },
+    "contact": {
+      "title": "Travaillons ensemble",
+      "description": "Vous avez un projet photographique ? Contactez-moi pour discuter de vos besoins.",
+      "button": {
+        "text": "Me contacter",
+        "href": "/contact"
+      }
+    }
+  }
+}

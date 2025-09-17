@@ -95,15 +95,15 @@
       ]
     },
     "serviceCard": {
-      "name": "Service Card Image (Legacy)",
-      "description": "Single image for service cards",
+      "name": "Service Card Image (Square)",
+      "description": "Square image for service cards",
       "gridTemplate": "single",
       "gap": "gap-0",
       "positions": [
         {
           "id": "card-image",
-          "classes": "w-full h-48 object-cover rounded-lg mb-4",
-          "description": "Medium image for service cards"
+          "classes": "w-full aspect-square object-cover rounded-lg mb-4",
+          "description": "Square image for service cards"
         }
       ]
     }

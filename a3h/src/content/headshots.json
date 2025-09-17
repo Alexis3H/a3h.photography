@@ -1,0 +1,116 @@
+{
+  "page": "headshots",
+  "title": "Headshots Professionnels - A3H Photography",
+  "menuTitle": "Headshots",
+  "seoTitle": "Headshots Professionnels - Photographe LinkedIn CV Morges Nyon Lausanne",
+  "seoDescription": "Photos professionnelles pour LinkedIn, CV et équipes. Coaching bienveillant, retouches naturelles, livraison express J+0/J+1. Région Morges-Nyon-Lausanne.",
+  "sections": {
+    "hero": {
+      "layoutType": "collage",
+      "singleOrientation": "landscape",
+      "collageLayout": "layout1",
+      "label": "HEADSHOTS PROFESSIONNELS",
+      "title": "Portraits qui ouvrent des portes",
+      "description": "Des photos professionnelles qui vous mettent en valeur sur LinkedIn, votre CV et vos réseaux. Coaching bienveillant, lumière flatteuse, retouches naturelles.",
+      "primaryButton": {
+        "text": "Réserver une séance",
+        "href": "/contact"
+      },
+      "secondaryButton": {
+        "text": "Voir les offres",
+        "href": "#offres"
+      },
+      "images": [
+        {
+          "src": "/headshot1.jpg",
+          "alt": "Portrait professionnel",
+          "focusPoint": "center",
+          "zoom": 1
+        },
+        {
+          "src": "/headshot2.jpg",
+          "alt": "Portrait LinkedIn",
+          "focusPoint": "center",
+          "zoom": 1
+        }
+      ]
+    },
+    "services": {
+      "title": "Nos formules",
+      "cards": [
+        {
+          "title": "EXPRESS",
+          "price": "190 CHF (30 min)",
+          "description": "1 look, 5-8 photos retouchées, livraison J+0. Parfait pour LinkedIn.",
+          "image": {
+            "src": "/express-headshot.jpg",
+            "alt": "Express Headshot",
+            "focusPoint": "center",
+            "zoom": 1
+          },
+          "button": {
+            "text": "Réserver",
+            "href": "/contact"
+          }
+        },
+        {
+          "title": "PROFESSIONNEL",
+          "price": "290 CHF (1h)",
+          "description": "2 looks, 10-15 photos retouchées, coaching personnalisé, livraison J+1.",
+          "image": {
+            "src": "/professional-headshot.jpg",
+            "alt": "Professionnel Headshot",
+            "focusPoint": "center",
+            "zoom": 1
+          },
+          "button": {
+            "text": "Réserver",
+            "href": "/contact"
+          }
+        },
+        {
+          "title": "ÉQUIPE",
+          "price": "À partir de 150 CHF/personne",
+          "description": "Photos d'équipe cohérentes, retouches uniformes, livraison rapide.",
+          "image": {
+            "src": "/team-headshot.jpg",
+            "alt": "Équipe Headshot",
+            "focusPoint": "center",
+            "zoom": 1
+          },
+          "button": {
+            "text": "Demander un devis",
+            "href": "/contact"
+          }
+        }
+      ]
+    },
+    "process": {
+      "title": "Comment ça marche ?",
+      "steps": [
+        {
+          "title": "Brief",
+          "description": "On échange sur votre image professionnelle et vos besoins."
+        },
+        {
+          "title": "Séance",
+          "description": "Coaching bienveillant, lumière flatteuse, plusieurs looks."
+        },
+        {
+          "title": "Livraison",
+          "description": "Retouches naturelles, fichiers optimisés pour web et print."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Réservez votre séance",
+      "description": "Disponible dans la région Morges – Nyon – Lausanne. Studio mobile possible.",
+      "placeholder": "Votre message...",
+      "button": {
+        "text": "Envoyer",
+        "href": "#"
+      },
+      "legal": "En soumettant, vous acceptez les CGV et la politique de confidentialité."
+    }
+  }
+}

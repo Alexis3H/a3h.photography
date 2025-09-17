@@ -1,0 +1,122 @@
+{
+  "page": "evenements",
+  "title": "Événements Privés - A3H Photography",
+  "menuTitle": "Événements",
+  "seoTitle": "Photographe Événements Privés - Anniversaires Baptêmes Famille Morges Nyon Lausanne",
+  "seoDescription": "Photographe pour événements privés : anniversaires, baptêmes, fêtes de famille. Moments authentiques, ambiance chaleureuse. Région Morges-Nyon-Lausanne.",
+  "sections": {
+    "hero": {
+      "layoutType": "collage",
+      "singleOrientation": "landscape",
+      "collageLayout": "layout3",
+      "label": "ÉVÉNEMENTS PRIVÉS",
+      "title": "Des moments authentiques",
+      "description": "Anniversaires, baptêmes, fêtes de famille... Je capture l'authenticité et la chaleur de vos moments précieux avec discrétion et bienveillance.",
+      "primaryButton": {
+        "text": "Découvrir les offres",
+        "href": "#offres"
+      },
+      "secondaryButton": {
+        "text": "Demander un devis",
+        "href": "/contact"
+      },
+      "images": [
+        {
+          "src": "/event1.jpg",
+          "alt": "Événement privé",
+          "focusPoint": "center",
+          "zoom": 1
+        },
+        {
+          "src": "/event2.jpg",
+          "alt": "Fête de famille",
+          "focusPoint": "center",
+          "zoom": 1
+        },
+        {
+          "src": "/event3.jpg",
+          "alt": "Anniversaire",
+          "focusPoint": "center",
+          "zoom": 1
+        }
+      ]
+    },
+    "services": {
+      "title": "Nos formules",
+      "cards": [
+        {
+          "title": "DÉCOUVERTE",
+          "price": "490 CHF (2h)",
+          "description": "Couverture discrète de votre événement, 50-80 photos retouchées, galerie privée.",
+          "image": {
+            "src": "/decouverte-event.jpg",
+            "alt": "Découverte Événement",
+            "focusPoint": "center",
+            "zoom": 1
+          },
+          "button": {
+            "text": "Réserver",
+            "href": "/contact"
+          }
+        },
+        {
+          "title": "COMPLÈTE",
+          "price": "790 CHF (4h)",
+          "description": "Couverture complète de l'événement, 100-150 photos, portraits de famille, livraison rapide.",
+          "image": {
+            "src": "/complete-event.jpg",
+            "alt": "Complète Événement",
+            "focusPoint": "center",
+            "zoom": 1
+          },
+          "button": {
+            "text": "Réserver",
+            "href": "/contact"
+          }
+        },
+        {
+          "title": "PREMIUM",
+          "price": "1190 CHF (6h)",
+          "description": "Couverture complète + portraits individuels, 200+ photos, retouches avancées, livre photo.",
+          "image": {
+            "src": "/premium-event.jpg",
+            "alt": "Premium Événement",
+            "focusPoint": "center",
+            "zoom": 1
+          },
+          "button": {
+            "text": "Réserver",
+            "href": "/contact"
+          }
+        }
+      ]
+    },
+    "process": {
+      "title": "Comment ça marche ?",
+      "steps": [
+        {
+          "title": "Échange",
+          "description": "On discute de votre événement et de vos attentes."
+        },
+        {
+          "title": "Couverture",
+          "description": "Je capture les moments authentiques avec discrétion."
+        },
+        {
+          "title": "Livraison",
+          "description": "Galerie privée avec photos retouchées et optimisées."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Organisons votre événement",
+      "description": "Disponible dans la région Morges – Nyon – Lausanne. Contactez-moi pour discuter de votre projet.",
+      "placeholder": "Votre message...",
+      "button": {
+        "text": "Envoyer",
+        "href": "#"
+      },
+      "legal": "En soumettant, vous acceptez les CGV et la politique de confidentialité."
+    }
+  }
+}

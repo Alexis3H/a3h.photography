@@ -1,18 +1,17 @@
 {
-  "page": "homepage",
-  "title": "A3H Photography - Des images qui ouvrent l'appétit",
-  "menuTitle": "Photographie",
-  "seoTitle": "A3H Photography - Photographe professionnel Morges Nyon Lausanne",
-  "seoDescription": "Photographe professionnel spécialisé dans les headshots, la photographie culinaire et les événements privés. Service express J+0/J+1. Région Morges-Nyon-Lausanne.",
+  "page": "restaurants",
+  "title": "Photographie Restaurants - A3H Photography",
+  "menuTitle": "Restaurants",
+  "seoTitle": "Photographie Culinaire Restaurants - Menus Réseaux Sociaux Morges Nyon Lausanne",
+  "seoDescription": "Photographie culinaire pour restaurants, menus et réseaux sociaux. Images qui ouvrent l'appétit, optimisées pour UberEats/Smood. Région Morges-Nyon-Lausanne.",
   "sections": {
     "hero": {
-      "layout": "heroGrid",
       "layoutType": "collage",
       "singleOrientation": "landscape",
       "collageLayout": "layout2",
-      "label": "Photographe à Morges et la Côte pour headshots, restaurants et événements",
-      "title": "Montrez le meilleur de vous-même — et de votre marque",
-      "description": "Headshots et portraits qui ouvrent des portes, photos culinaires qui donnent faim, souvenirs d’événements qui restent. Accompagnement chaleureux, retouches naturelles, livraison rapide.\n\nLivraison J+0/J+1 • Studio mobile • Galeries privées",
+      "label": "OFFRE RESTAURANTS",
+      "title": "Des images qui ouvrent l'appétit",
+      "description": "De belles photos de vos plats et de votre ambiance augmentent vos réservations et donnent confiance à vos clients. Je vous accompagne de la carte aux réseaux sociaux.",
       "primaryButton": {
         "text": "Découvrir les packs",
         "href": "#offres"
@@ -25,29 +24,14 @@
         {
           "src": "/_DSC4658.jpg",
           "alt": "Photographie culinaire",
-          "position": "top-left",
-          "colSpan": 1,
           "focusPoint": "44.83333333333333% 42%",
-          "size": "large",
           "zoom": 1
         },
         {
           "src": "/_DSF1983.jpg",
           "alt": "Plats stylisés",
-          "position": "top-right",
-          "colSpan": 1,
           "focusPoint": "center",
-          "size": "large",
           "zoom": 1
-        },
-        {
-          "src": "/P3010418.jpg",
-          "alt": "Ambiance restaurant",
-          "position": "bottom-full",
-          "colSpan": 1,
-          "focusPoint": "49.5% 66%",
-          "size": "full",
-          "zoom": 1.3
         }
       ]
     },
@@ -61,8 +45,8 @@
           "image": {
             "src": "/DSCF3687.jpg",
             "alt": "Menu Starter",
-            "focusPoint": "56.99999999999999% 12%",
-            "zoom": 1.1
+            "focusPoint": "center",
+            "zoom": 1
           },
           "button": {
             "text": "Réserver",
@@ -117,16 +101,14 @@
       },
       "image": {
         "src": "/_DSC5340.jpg",
-        "alt": "Formule Social Miam",
-        "focusPoint": "center",
-        "zoom": 1
+        "alt": "Formule Social Miam"
       }
     },
     "process": {
       "title": "Comment ça marche ?",
       "steps": [
         {
-          "title": "test",
+          "title": "Brief",
           "description": "On échange sur vos plats phares et votre identité."
         },
         {
@@ -142,33 +124,7 @@
     "contact": {
       "title": "Parlons de votre restaurant",
       "description": "Envoyez-moi vos besoins — je vous réponds sous 24 h.",
-      "form": {
-        "nom": {
-          "label": "Nom",
-          "placeholder": "Votre nom",
-          "required": true
-        },
-        "prenom": {
-          "label": "Prénom",
-          "placeholder": "Votre prénom",
-          "required": true
-        },
-        "email": {
-          "label": "Email",
-          "placeholder": "votre@email.com",
-          "required": true
-        },
-        "telephone": {
-          "label": "Téléphone",
-          "placeholder": "Votre numéro",
-          "required": false
-        },
-        "message": {
-          "label": "Message",
-          "placeholder": "Votre message...",
-          "required": true
-        }
-      },
+      "placeholder": "Votre message...",
       "button": {
         "text": "Envoyer",
         "href": "#"

@@ -20,12 +20,12 @@ interface ServiceCardProps {
 export default function ServiceCard({ title, price, description, image, button }: ServiceCardProps) {
   return (
     <div className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center">
-      <div className="w-full h-48 overflow-hidden rounded-lg mb-4">
+      <div className="w-full aspect-square overflow-hidden rounded-lg mb-4">
         <Image
           src={image.src}
           alt={image.alt}
           width={300}
-          height={200}
+          height={300}
           className="w-full h-full object-cover"
           style={{
             objectPosition: image.focusPoint || 'center',

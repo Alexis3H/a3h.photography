@@ -1,10 +1,22 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getMenuItems } from '../lib/menuManager';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuItems, setMenuItems] = useState(getMenuItems());
+  
+  // Listen for menu updates
+  useEffect(() => {
+    const handleMenuUpdate = () => {
+      setMenuItems(getMenuItems());
+    };
+
+    window.addEventListener('menuUpdated', handleMenuUpdate);
+    return () => window.removeEventListener('menuUpdated', handleMenuUpdate);
+  }, []);
 
   return (
     <nav className="bg-white shadow-sm border-b">
@@ -18,27 +30,19 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              Accueil
-            </Link>
-            <Link href="/headshots" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              Headshots
-            </Link>
-            <Link href="/restaurants" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              Restaurants
-            </Link>
-            <Link href="/evenements" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              Événements
-            </Link>
-            <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              Portfolio
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
-              À propos
-            </Link>
-            <Link href="/contact" className="bg-gray-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800">
-              Contact
-            </Link>
+            {menuItems.map((item) => (
+              <Link 
+                key={item.id}
+                href={item.path} 
+                className={`px-3 py-2 text-sm font-medium ${
+                  item.id === 'contact' 
+                    ? 'bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800'
+                    : 'text-gray-700 hover:text-gray-900'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile menu button */}
@@ -62,27 +66,19 @@ export default function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link href="/" className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium">
-                Accueil
-              </Link>
-              <Link href="/headshots" className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium">
-                Headshots
-              </Link>
-              <Link href="/restaurants" className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium">
-                Restaurants
-              </Link>
-              <Link href="/evenements" className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium">
-                Événements
-              </Link>
-              <Link href="/portfolio" className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium">
-                Portfolio
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium">
-                À propos
-              </Link>
-              <Link href="/contact" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800">
-                Contact
-              </Link>
+              {menuItems.map((item) => (
+                <Link 
+                  key={item.id}
+                  href={item.path} 
+                  className={`block px-3 py-2 text-base font-medium ${
+                    item.id === 'contact' 
+                      ? 'bg-gray-900 text-white rounded-md hover:bg-gray-800'
+                      : 'text-gray-700 hover:text-gray-900'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
         )}

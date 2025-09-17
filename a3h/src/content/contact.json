@@ -1,0 +1,85 @@
+{
+  "page": "contact",
+  "title": "Contact - A3H Photography",
+  "menuTitle": "Contact",
+  "seoTitle": "Contact A3H Photography - Photographe Professionnel Morges Nyon Lausanne",
+  "seoDescription": "Contactez A3H Photography pour vos projets photographiques. Headshots, photographie culinaire, événements privés. Région Morges-Nyon-Lausanne.",
+  "sections": {
+    "hero": {
+      "layoutType": "single",
+      "singleOrientation": "landscape",
+      "title": "Contact",
+      "description": "Vous avez un projet photographique ? Contactez-moi pour discuter de vos besoins. Je vous réponds sous 24h.",
+      "images": [
+        {
+          "src": "/contact-hero.jpg",
+          "alt": "Contact A3H Photography",
+          "focusPoint": "center",
+          "zoom": 1
+        }
+      ]
+    },
+    "contactForm": {
+      "title": "Parlons de votre projet",
+      "description": "Envoyez-moi vos besoins — je vous réponds sous 24 h.",
+      "form": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Votre nom",
+          "required": true
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "votre@email.com",
+          "required": true
+        },
+        "phone": {
+          "label": "Téléphone",
+          "placeholder": "Votre numéro",
+          "required": false
+        },
+        "service": {
+          "label": "Service",
+          "options": [
+            "Headshots professionnels",
+            "Photographie culinaire",
+            "Événements privés",
+            "Autre"
+          ],
+          "required": true
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Décrivez votre projet...",
+          "required": true
+        },
+        "button": {
+          "text": "Envoyer",
+          "href": "#"
+        },
+        "legal": "En soumettant, vous acceptez les CGV et la politique de confidentialité."
+      }
+    },
+    "info": {
+      "title": "Informations pratiques",
+      "items": [
+        {
+          "title": "Zone de service",
+          "description": "Morges – Nyon – Lausanne et environs"
+        },
+        {
+          "title": "Disponibilité",
+          "description": "Du lundi au vendredi, 9h-18h"
+        },
+        {
+          "title": "Livraison",
+          "description": "Express J+0/J+1 pour headshots et portraits"
+        },
+        {
+          "title": "Studio mobile",
+          "description": "Déplacement possible sur site"
+        }
+      ]
+    }
+  }
+}
