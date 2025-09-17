@@ -43,7 +43,7 @@
           "zoom": 1
         },
         {
-          "src": "/P3010418.jpg",
+          "src": "/uploads/P3010418.jpg",
           "alt": "Ambiance restaurant",
           "position": "bottom-full",
           "colSpan": 1,
@@ -61,7 +61,7 @@
           "price": "390 CHF (-2 h)",
           "description": "Jusqu'à 10 plats stylisés + 5 visuels du lieu/équipe, 30-40 images web.",
           "image": {
-            "src": "/DSCF3687.jpg",
+            "src": "/uploads/DSCF3687.jpg",
             "alt": "Menu Starter",
             "focusPoint": "56.99999999999999% 12%",
             "zoom": 1.1
@@ -76,7 +76,7 @@
           "price": "690 CHF (½ journée)",
           "description": "20-30 plats + ambiance + portraits d'équipe, 60-80 images, set optimisé pour UberEats/Smood.",
           "image": {
-            "src": "/DSCF3898.jpg",
+            "src": "/uploads/DSCF3898.jpg",
             "alt": "Carte Complète",
             "focusPoint": "center",
             "zoom": 1
@@ -91,7 +91,7 @@
           "price": "1090 CHF (journée)",
           "description": "Storytelling cuisine + salle + détails + portraits, 100-140 images harmonisées.",
           "image": {
-            "src": "/DSCF6573.jpg",
+            "src": "/uploads/DSCF6573.jpg",
             "alt": "Journée Brand",
             "focusPoint": "center",
             "zoom": 1
@@ -118,7 +118,7 @@
         "href": "/contact"
       },
       "image": {
-        "src": "/_DSC5340.jpg",
+        "src": "/uploads/_DSC5340.jpg",
         "alt": "Formule Social Miam",
         "focusPoint": "center",
         "zoom": 1
