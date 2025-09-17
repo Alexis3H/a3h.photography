@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import ImageGrid from '../../components/ImageGrid';
 import ServiceCard from '../../components/ServiceCard';
 import FeatureImage from '../../components/FeatureImage';
+import FlexibleImageContainer from '../../components/FlexibleImageContainer';
 import { loadHomepageContent } from '../../lib/content';
 
 export default function Home() {
@@ -36,9 +37,11 @@ export default function Home() {
           </div>
         </div>
         <div className="md:w-1/2">
-          <ImageGrid 
-            layoutType={content.sections.hero.layout as any}
+          <FlexibleImageContainer
             images={content.sections.hero.images}
+            layoutType={content.sections.hero.layoutType || 'single'}
+            singleOrientation={content.sections.hero.singleOrientation || 'landscape'}
+            collageLayout={content.sections.hero.collageLayout || 'layout1'}
           />
         </div>
       </section>

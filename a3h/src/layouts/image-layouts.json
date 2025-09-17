@@ -1,87 +1,111 @@
 {
-  "heroGrid": {
-    "name": "Hero Image Grid",
-    "description": "2x2 grid layout for hero sections",
-    "gridTemplate": "grid-cols-2",
-    "gap": "gap-4",
-    "positions": [
-      {
-        "id": "top-left",
-        "classes": "col-span-1 h-40",
-        "description": "Small square image, top left"
-      },
-      {
-        "id": "top-right", 
-        "classes": "col-span-1 h-40",
-        "description": "Small square image, top right"
-      },
-      {
-        "id": "bottom-full",
-        "classes": "col-span-2 h-60",
-        "description": "Large landscape image, bottom row"
-      }
-    ]
+  "single": {
+    "portrait": {
+      "name": "Single Portrait Image (2:3)",
+      "description": "Vertical image container for portrait photos (2:3 aspect ratio)",
+      "containerClasses": "w-full max-w-xs sm:max-w-sm mx-auto aspect-[2/3] overflow-hidden rounded-lg",
+      "imageClasses": "w-full h-full object-cover",
+      "aspectRatio": "2:3"
+    },
+    "landscape": {
+      "name": "Single Landscape Image (3:2)", 
+      "description": "Horizontal image container for landscape photos (3:2 aspect ratio)",
+      "containerClasses": "w-full max-w-sm sm:max-w-lg mx-auto aspect-[3/2] overflow-hidden rounded-lg",
+      "imageClasses": "w-full h-full object-cover",
+      "aspectRatio": "3:2"
+    },
+    "square": {
+      "name": "Single Square Image (1:1)",
+      "description": "Square image container (1:1 aspect ratio)",
+      "containerClasses": "w-full max-w-xs sm:max-w-sm mx-auto aspect-square overflow-hidden rounded-lg",
+      "imageClasses": "w-full h-full object-cover",
+      "aspectRatio": "1:1"
+    }
   },
-  "serviceCard": {
-    "name": "Service Card Image",
-    "description": "Single image for service cards",
-    "gridTemplate": "single",
-    "gap": "gap-0",
-    "positions": [
-      {
-        "id": "card-image",
-        "classes": "w-full h-48 object-cover rounded-lg mb-4",
-        "description": "Medium image for service cards"
-      }
-    ]
+  "collage": {
+    "layout1": {
+      "name": "Collage Layout 1: 2 Side-by-Side Landscape (3:2)",
+      "description": "Two landscape images side by side in 3:2 ratio within 3:2 container",
+      "containerClasses": "grid grid-cols-2 gap-2 sm:gap-3 max-w-sm sm:max-w-lg mx-auto aspect-[3/2]",
+      "imageClasses": "w-full h-full object-cover rounded-lg",
+      "maxImages": 2,
+      "positions": [
+        { "id": "left", "classes": "col-span-1 row-span-1 overflow-hidden rounded-lg" },
+        { "id": "right", "classes": "col-span-1 row-span-1 overflow-hidden rounded-lg" }
+      ]
+    },
+    "layout2": {
+      "name": "Collage Layout 2: 2 Stacked Vertical Landscape (3:2)",
+      "description": "Two landscape images stacked vertically in 3:2 ratio within 3:2 container",
+      "containerClasses": "grid grid-cols-1 gap-2 sm:gap-3 max-w-sm sm:max-w-lg mx-auto aspect-[3/2]",
+      "imageClasses": "w-full h-full object-cover rounded-lg",
+      "maxImages": 2,
+      "positions": [
+        { "id": "top", "classes": "col-span-1 row-span-1 overflow-hidden rounded-lg" },
+        { "id": "bottom", "classes": "col-span-1 row-span-1 overflow-hidden rounded-lg" }
+      ]
+    },
+    "layout3": {
+      "name": "Collage Layout 3: 1 Portrait + 2 Landscape (3:2)",
+      "description": "One portrait (2:3) on left, two landscapes (3:2) on right in 3:2 container",
+      "containerClasses": "grid grid-cols-3 gap-2 sm:gap-3 max-w-sm sm:max-w-lg mx-auto aspect-[3/2]",
+      "imageClasses": "w-full h-full object-cover rounded-lg",
+      "maxImages": 3,
+      "positions": [
+        { "id": "portrait", "classes": "col-span-1 row-span-2 overflow-hidden rounded-lg" },
+        { "id": "landscape-1", "classes": "col-span-2 row-span-1 overflow-hidden rounded-lg" },
+        { "id": "landscape-2", "classes": "col-span-2 row-span-1 overflow-hidden rounded-lg" }
+      ]
+    },
+    "layout4": {
+      "name": "Collage Layout 4: 3 Side-by-Side Portrait (3:2)",
+      "description": "Three portrait images side by side in 2:3 ratio within 3:2 container",
+      "containerClasses": "grid grid-cols-3 gap-2 sm:gap-3 max-w-sm sm:max-w-lg mx-auto aspect-[3/2]",
+      "imageClasses": "w-full h-full object-cover rounded-lg",
+      "maxImages": 3,
+      "positions": [
+        { "id": "left", "classes": "col-span-1 row-span-1 overflow-hidden rounded-lg" },
+        { "id": "center", "classes": "col-span-1 row-span-1 overflow-hidden rounded-lg" },
+        { "id": "right", "classes": "col-span-1 row-span-1 overflow-hidden rounded-lg" }
+      ]
+    }
   },
-  "featureImage": {
-    "name": "Feature Section Image",
-    "description": "Large image for feature sections",
-    "gridTemplate": "single",
-    "gap": "gap-0", 
-    "positions": [
-      {
-        "id": "feature-large",
-        "classes": "h-96 rounded-lg overflow-hidden",
-        "description": "Large image for feature sections"
-      }
-    ]
-  },
-  "portfolioGrid": {
-    "name": "Portfolio Image Grid",
-    "description": "3-column grid for portfolio galleries",
-    "gridTemplate": "grid-cols-3",
-    "gap": "gap-6",
-    "positions": [
-      {
-        "id": "portfolio-item",
-        "classes": "h-64",
-        "description": "Portfolio grid item"
-      }
-    ]
-  },
-  "contactGrid": {
-    "name": "Contact Section Grid",
-    "description": "2x2 grid for contact sections",
-    "gridTemplate": "grid-cols-2",
-    "gap": "gap-4",
-    "positions": [
-      {
-        "id": "contact-small-1",
-        "classes": "col-span-1 h-40",
-        "description": "Small contact image 1"
-      },
-      {
-        "id": "contact-small-2",
-        "classes": "col-span-1 h-40", 
-        "description": "Small contact image 2"
-      },
-      {
-        "id": "contact-large",
-        "classes": "col-span-2 h-60",
-        "description": "Large contact image"
-      }
-    ]
+  "legacy": {
+    "heroGrid": {
+      "name": "Hero Image Grid (Legacy)",
+      "description": "2x2 grid layout for hero sections",
+      "gridTemplate": "grid-cols-2",
+      "gap": "gap-4",
+      "positions": [
+        {
+          "id": "top-left",
+          "classes": "col-span-1 h-40",
+          "description": "Small square image, top left"
+        },
+        {
+          "id": "top-right", 
+          "classes": "col-span-1 h-40",
+          "description": "Small square image, top right"
+        },
+        {
+          "id": "bottom-full",
+          "classes": "col-span-2 h-60",
+          "description": "Large landscape image, bottom row"
+        }
+      ]
+    },
+    "serviceCard": {
+      "name": "Service Card Image (Legacy)",
+      "description": "Single image for service cards",
+      "gridTemplate": "single",
+      "gap": "gap-0",
+      "positions": [
+        {
+          "id": "card-image",
+          "classes": "w-full h-48 object-cover rounded-lg mb-4",
+          "description": "Medium image for service cards"
+        }
+      ]
+    }
   }
 }

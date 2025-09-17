@@ -4,6 +4,9 @@
   "sections": {
     "hero": {
       "layout": "heroGrid",
+      "layoutType": "collage",
+      "singleOrientation": "landscape",
+      "collageLayout": "layout2",
       "label": "OFFRE RESTAURANTS",
       "title": "Des images qui ouvrent l'appétit",
       "description": "De belles photos de vos plats et de votre ambiance augmentent vos réservations et donnent confiance à vos clients. Je vous accompagne de la carte aux réseaux sociaux.",
@@ -17,13 +20,13 @@
       },
       "images": [
         {
-          "src": "/P3010418.jpg",
+          "src": "/_DSC4658.jpg",
           "alt": "Photographie culinaire",
           "position": "top-left",
           "colSpan": 1,
-          "focusPoint": "51.16666666666667% 48.5%",
-          "size": "medium",
-          "zoom": 0.7
+          "focusPoint": "44.83333333333333% 42%",
+          "size": "large",
+          "zoom": 1
         },
         {
           "src": "/_DSF1983.jpg",
@@ -31,17 +34,17 @@
           "position": "top-right",
           "colSpan": 1,
           "focusPoint": "center",
-          "size": "medium",
-          "zoom": 2.2
+          "size": "large",
+          "zoom": 1
         },
         {
-          "src": "/_DSC4658.jpg",
+          "src": "/P3010418.jpg",
           "alt": "Ambiance restaurant",
           "position": "bottom-full",
-          "colSpan": 2,
+          "colSpan": 1,
           "focusPoint": "49.5% 66%",
           "size": "full",
-          "zoom": 1
+          "zoom": 1.3
         }
       ]
     },

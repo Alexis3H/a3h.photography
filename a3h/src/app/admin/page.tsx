@@ -5,6 +5,7 @@ import ImageGrid from '../../../components/ImageGrid';
 import ServiceCard from '../../../components/ServiceCard';
 import FeatureImage from '../../../components/FeatureImage';
 import ImageEditor from '../../../components/ImageEditor';
+import FlexibleImageContainer from '../../../components/FlexibleImageContainer';
 
 export default function Admin() {
   const [content, setContent] = useState(null);
@@ -151,6 +152,50 @@ export default function Admin() {
                       />
                     </div>
                     <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Image Layout</label>
+                      <div className="mb-4">
+                        <label className="block text-xs font-medium text-gray-600 mb-1">Layout Type</label>
+                        <select
+                          value={content.sections.hero.layoutType || 'single'}
+                          onChange={(e) => updateField('sections.hero.layoutType', e.target.value)}
+                          className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
+                        >
+                          <option value="single">Single Image</option>
+                          <option value="collage">Collage (Multiple Images)</option>
+                        </select>
+                      </div>
+                      
+                      {content.sections.hero.layoutType === 'single' && (
+                        <div className="mb-4">
+                          <label className="block text-xs font-medium text-gray-600 mb-1">Image Orientation</label>
+                          <select
+                            value={content.sections.hero.singleOrientation || 'landscape'}
+                            onChange={(e) => updateField('sections.hero.singleOrientation', e.target.value)}
+                            className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
+                          >
+                            <option value="portrait">Portrait (2:3)</option>
+                            <option value="landscape">Landscape (3:2)</option>
+                            <option value="square">Square (1:1)</option>
+                          </select>
+                        </div>
+                      )}
+                      
+                      {content.sections.hero.layoutType === 'collage' && (
+                        <div className="mb-4">
+                          <label className="block text-xs font-medium text-gray-600 mb-1">Collage Layout</label>
+                          <select
+                            value={content.sections.hero.collageLayout || 'layout1'}
+                            onChange={(e) => updateField('sections.hero.collageLayout', e.target.value)}
+                            className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
+                          >
+                            <option value="layout1">Layout 1: 2 Side-by-Side Landscape (3:2 container)</option>
+                            <option value="layout2">Layout 2: 2 Stacked Vertical Landscape (3:2 container)</option>
+                            <option value="layout3">Layout 3: 1 Portrait + 2 Landscape (3:2 container)</option>
+                            <option value="layout4">Layout 4: 3 Side-by-Side Portrait (3:2 container)</option>
+                          </select>
+                        </div>
+                      )}
+                      
                       <label className="block text-sm font-medium text-gray-700 mb-2">Images</label>
                       {content.sections.hero.images.map((image: any, index: number) => (
                         <div key={index} className="mb-4 border border-gray-200 rounded-lg p-4">
@@ -195,33 +240,6 @@ export default function Admin() {
                             />
                           </div>
                           
-                          {/* Image Size */}
-                          <div className="mb-2">
-                            <label className="block text-xs font-medium text-gray-600 mb-1">Image Size</label>
-                            <select
-                              value={image.size || 'medium'}
-                              onChange={(e) => updateField(`sections.hero.images.${index}.size`, e.target.value)}
-                              className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
-                            >
-                              <option value="small">Small (200px)</option>
-                              <option value="medium">Medium (400px)</option>
-                              <option value="large">Large (600px)</option>
-                              <option value="full">Full Width</option>
-                            </select>
-                          </div>
-                          
-                          {/* Column Span */}
-                          <div className="mb-2">
-                            <label className="block text-xs font-medium text-gray-600 mb-1">Column Span</label>
-                            <select
-                              value={image.colSpan || 1}
-                              onChange={(e) => updateField(`sections.hero.images.${index}.colSpan`, parseInt(e.target.value))}
-                              className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
-                            >
-                              <option value={1}>1 Column</option>
-                              <option value={2}>2 Columns</option>
-                            </select>
-                          </div>
                         </div>
                       ))}
                     </div>
@@ -324,9 +342,11 @@ export default function Admin() {
                     </button>
                   </div>
                   <div className="mt-4">
-                    <ImageGrid 
-                      layoutType="heroGrid"
+                    <FlexibleImageContainer
                       images={content.sections.hero.images}
+                      layoutType={content.sections.hero.layoutType || 'single'}
+                      singleOrientation={content.sections.hero.singleOrientation || 'landscape'}
+                      collageLayout={content.sections.hero.collageLayout || 'layout1'}
                     />
                   </div>
                 </div>
