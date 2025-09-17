@@ -26,7 +26,7 @@ export default function ImageEditor({
   const [zoom, setZoom] = useState(initialZoom);
   const [focusPoint, setFocusPoint] = useState(initialFocusPoint);
   const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [dragStart] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleZoomChange = useCallback((newZoom: number) => {

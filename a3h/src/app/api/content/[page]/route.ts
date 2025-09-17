@@ -11,7 +11,7 @@ export async function GET(
     const contentPath = path.join(process.cwd(), 'src', 'content', `${page}.json`);
     const content = fs.readFileSync(contentPath, 'utf8');
     return NextResponse.json(JSON.parse(content));
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Content not found' }, { status: 404 });
   }
 }
@@ -29,7 +29,7 @@ export async function POST(
     fs.writeFileSync(contentPath, JSON.stringify(body, null, 2));
     
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Failed to save content' }, { status: 500 });
   }
 }

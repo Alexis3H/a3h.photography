@@ -13,7 +13,7 @@ const DEFAULT_MENU_ITEMS: MenuItem[] = [
 ];
 
 // Global menu cache
-let menuCache: MenuItem[] | null = null;
+// let menuCache: MenuItem[] | null = null;
 
 export function getMenuItems(): MenuItem[] {
   // Always return default items for SSR to prevent hydration mismatch
