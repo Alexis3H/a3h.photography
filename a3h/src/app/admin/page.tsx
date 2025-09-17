@@ -134,16 +134,16 @@ export default function Admin() {
   };
 
   if (!content) {
-    return <div className=&quot;p-8&quot;>Loading...</div>;
+    return <div className="p-8">Loading...</div>;
   }
 
   return (
-    <div className=&quot;min-h-screen bg-gray-50&quot;>
-      <div className=&quot;max-w-7xl mx-auto p-8&quot;>
-        <div className=&quot;bg-white rounded-lg shadow-sm p-6 mb-6&quot;>
-          <div className=&quot;flex justify-between items-center mb-4&quot;>
-            <h1 className=&quot;text-2xl font-bold text-gray-900&quot;>Content Management</h1>
-            <div className=&quot;flex space-x-4&quot;>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto p-8">
+        <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+          <div className="flex justify-between items-center mb-4">
+            <h1 className="text-2xl font-bold text-gray-900">Content Management</h1>
+            <div className="flex space-x-4">
               <button
                 onClick={() => setIsEditing(!isEditing)}
                 className={`px-4 py-2 rounded-md ${isEditing ? 'bg-gray-200 text-gray-800' : 'bg-blue-600 text-white'}`}
@@ -153,7 +153,7 @@ export default function Admin() {
               {isEditing && (
                 <button
                   onClick={saveContent}
-                  className=&quot;bg-green-600 text-white px-4 py-2 rounded-md&quot;
+                  className="bg-green-600 text-white px-4 py-2 rounded-md"
                 >
                   Save Changes
                 </button>
@@ -162,12 +162,12 @@ export default function Admin() {
           </div>
           
           {/* Page Selector */}
-          <div className=&quot;mb-6&quot;>
-            <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Page à éditer</label>
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-700 mb-2">Page à éditer</label>
             <select
               value={activePage}
               onChange={(e) => setActivePage(e.target.value)}
-              className=&quot;w-full p-3 border border-gray-300 rounded-md text-sm text-gray-900 bg-white&quot;
+              className="w-full p-3 border border-gray-300 rounded-md text-sm text-gray-900 bg-white"
             >
               {pages.map(page => (
                 <option key={page.id} value={page.id}>{page.name}</option>
@@ -177,7 +177,7 @@ export default function Admin() {
 
 
               {/* Section Navigation */}
-              <div className=&quot;flex space-x-2 mb-6&quot;>
+              <div className="flex space-x-2 mb-6">
                 <button
                   onClick={() => setActiveSection('pageSettings')}
                   className={`px-4 py-2 rounded-md ${
@@ -214,49 +214,49 @@ export default function Admin() {
         </div>
 
         {/* Content Editor */}
-        <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Editor Panel */}
-          <div className=&quot;bg-white rounded-lg shadow-sm p-6&quot;>
-            <h2 className=&quot;text-xl font-bold text-gray-900 mb-4&quot;>
+          <div className="bg-white rounded-lg shadow-sm p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
               Edit {activeSection.charAt(0).toUpperCase() + activeSection.slice(1)}
             </h2>
             
             {isEditing ? (
-              <div className=&quot;space-y-4&quot;>
+              <div className="space-y-4">
                 {/* Page Settings Section */}
                 {activeSection === 'pageSettings' && (
                   <>
-                    <div className=&quot;border border-gray-200 rounded-lg p-4 bg-gray-50&quot;>
-                      <h3 className=&quot;text-lg font-semibold text-gray-900 mb-4&quot;>Paramètres de la page</h3>
-                      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
+                    <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-4">Paramètres de la page</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Titre du menu</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Titre du menu</label>
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={content.menuTitle || ''}
                             onChange={(e) => updateField('menuTitle', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                            placeholder=&quot;Titre affiché dans le menu&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                            placeholder="Titre affiché dans le menu"
                           />
                         </div>
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Titre SEO</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Titre SEO</label>
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={content.seoTitle || ''}
                             onChange={(e) => updateField('seoTitle', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                            placeholder=&quot;Titre pour les moteurs de recherche&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                            placeholder="Titre pour les moteurs de recherche"
                           />
                         </div>
-                        <div className=&quot;md:col-span-2&quot;>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Description SEO</label>
+                        <div className="md:col-span-2">
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Description SEO</label>
                           <textarea
                             value={content.seoDescription || ''}
                             onChange={(e) => updateField('seoDescription', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                             rows={3}
-                            placeholder=&quot;Description pour les moteurs de recherche&quot;
+                            placeholder="Description pour les moteurs de recherche"
                           />
                         </div>
                       </div>
@@ -267,87 +267,87 @@ export default function Admin() {
                 {activeSection === 'hero' && content.sections.hero && (
                   <>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Label</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Label</label>
                       <input
-                        type=&quot;text&quot;
+                        type="text"
                         value={content.sections.hero.label}
                         onChange={(e) => updateField('sections.hero.label', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                         style={{ color: '#111827' }}
                       />
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Title</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Title</label>
                       <input
-                        type=&quot;text&quot;
+                        type="text"
                         value={content.sections.hero.title}
                         onChange={(e) => updateField('sections.hero.title', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                       />
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Description</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
                       <textarea
                         value={content.sections.hero.description}
                         onChange={(e) => updateField('sections.hero.description', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                         rows={3}
                       />
                     </div>
                         {/* Primary Button Configuration */}
-                        <div className=&quot;border border-gray-200 rounded-lg p-4&quot;>
-                          <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Primary Button</h4>
-                          <div className=&quot;space-y-3&quot;>
+                        <div className="border border-gray-200 rounded-lg p-4">
+                          <h4 className="font-semibold text-gray-900 mb-3">Primary Button</h4>
+                          <div className="space-y-3">
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Button Text</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-2">Button Text</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.hero?.primaryButton?.text || ''}
                                 onChange={(e) => updateField('sections.hero.primaryButton.text', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                placeholder=&quot;Button text&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                placeholder="Button text"
                               />
                             </div>
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Button Type</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-2">Button Type</label>
                               <select
                                 value={content.sections?.hero?.primaryButton?.type || 'link'}
                                 onChange={(e) => updateField('sections.hero.primaryButton.type', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900"
                               >
-                                <option value=&quot;link&quot;>External Link</option>
-                                <option value=&quot;section&quot;>Page Section</option>
-                                <option value=&quot;phone&quot;>Phone Call</option>
-                                <option value=&quot;email&quot;>Email</option>
+                                <option value="link">External Link</option>
+                                <option value="section">Page Section</option>
+                                <option value="phone">Phone Call</option>
+                                <option value="email">Email</option>
                               </select>
                             </div>
                             {content.sections?.hero?.primaryButton?.type === 'link' && (
                               <div>
-                                <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Link URL</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">Link URL</label>
                                 <input
-                                  type=&quot;text&quot;
+                                  type="text"
                                   value={content.sections?.hero?.primaryButton?.href || ''}
                                   onChange={(e) => updateField('sections.hero.primaryButton.href', e.target.value)}
-                                  className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                  placeholder=&quot;https://example.com or /page&quot;
+                                  className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                  placeholder="https://example.com or /page"
                                 />
                               </div>
                             )}
                             {content.sections?.hero?.primaryButton?.type === 'section' && (
                               <div>
-                                <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Section ID</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">Section ID</label>
                                 <input
-                                  type=&quot;text&quot;
+                                  type="text"
                                   value={content.sections?.hero?.primaryButton?.sectionId || ''}
                                   onChange={(e) => updateField('sections.hero.primaryButton.sectionId', e.target.value)}
-                                  className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                  placeholder=&quot;#section-id&quot;
+                                  className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                  placeholder="#section-id"
                                 />
-                                <div className=&quot;mt-2 p-3 bg-blue-50 rounded-md&quot;>
-                                  <p className=&quot;text-sm font-medium text-blue-900 mb-2&quot;>Available sections on this page:</p>
-                                  <div className=&quot;text-xs text-blue-700 space-y-1&quot;>
+                                <div className="mt-2 p-3 bg-blue-50 rounded-md">
+                                  <p className="text-sm font-medium text-blue-900 mb-2">Available sections on this page:</p>
+                                  <div className="text-xs text-blue-700 space-y-1">
                                     {getAvailableSections(activePage).map((section, index) => (
-                                      <div key={index}>• <code className=&quot;bg-blue-100 px-1 rounded&quot;>{section.id}</code> - {section.name}</div>
+                                      <div key={index}>• <code className="bg-blue-100 px-1 rounded">{section.id}</code> - {section.name}</div>
                                     ))}
                                   </div>
                                 </div>
@@ -355,25 +355,25 @@ export default function Admin() {
                             )}
                             {content.sections?.hero?.primaryButton?.type === 'phone' && (
                               <div>
-                                <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Phone Number</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                                 <input
-                                  type=&quot;tel&quot;
+                                  type="tel"
                                   value={content.sections?.hero?.primaryButton?.phone || ''}
                                   onChange={(e) => updateField('sections.hero.primaryButton.phone', e.target.value)}
-                                  className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                  placeholder=&quot;+41791234567&quot;
+                                  className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                  placeholder="+41791234567"
                                 />
                               </div>
                             )}
                             {content.sections?.hero?.primaryButton?.type === 'email' && (
                               <div>
-                                <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Email Address</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                                 <input
-                                  type=&quot;email&quot;
+                                  type="email"
                                   value={content.sections?.hero?.primaryButton?.email || ''}
                                   onChange={(e) => updateField('sections.hero.primaryButton.email', e.target.value)}
-                                  className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                  placeholder=&quot;contact@example.com&quot;
+                                  className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                  placeholder="contact@example.com"
                                 />
                               </div>
                             )}
@@ -381,59 +381,59 @@ export default function Admin() {
                         </div>
 
                         {/* Secondary Button Configuration */}
-                        <div className=&quot;border border-gray-200 rounded-lg p-4&quot;>
-                          <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Secondary Button</h4>
-                          <div className=&quot;space-y-3&quot;>
+                        <div className="border border-gray-200 rounded-lg p-4">
+                          <h4 className="font-semibold text-gray-900 mb-3">Secondary Button</h4>
+                          <div className="space-y-3">
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Button Text</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-2">Button Text</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.hero?.secondaryButton?.text || ''}
                                 onChange={(e) => updateField('sections.hero.secondaryButton.text', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                placeholder=&quot;Button text&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                placeholder="Button text"
                               />
                             </div>
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Button Type</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-2">Button Type</label>
                               <select
                                 value={content.sections?.hero?.secondaryButton?.type || 'link'}
                                 onChange={(e) => updateField('sections.hero.secondaryButton.type', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900"
                               >
-                                <option value=&quot;link&quot;>External Link</option>
-                                <option value=&quot;section&quot;>Page Section</option>
-                                <option value=&quot;phone&quot;>Phone Call</option>
-                                <option value=&quot;email&quot;>Email</option>
+                                <option value="link">External Link</option>
+                                <option value="section">Page Section</option>
+                                <option value="phone">Phone Call</option>
+                                <option value="email">Email</option>
                               </select>
                             </div>
                             {content.sections?.hero?.secondaryButton?.type === 'link' && (
                               <div>
-                                <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Link URL</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">Link URL</label>
                                 <input
-                                  type=&quot;text&quot;
+                                  type="text"
                                   value={content.sections?.hero?.secondaryButton?.href || ''}
                                   onChange={(e) => updateField('sections.hero.secondaryButton.href', e.target.value)}
-                                  className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                  placeholder=&quot;https://example.com or /page&quot;
+                                  className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                  placeholder="https://example.com or /page"
                                 />
                               </div>
                             )}
                             {content.sections?.hero?.secondaryButton?.type === 'section' && (
                               <div>
-                                <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Section ID</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">Section ID</label>
                                 <input
-                                  type=&quot;text&quot;
+                                  type="text"
                                   value={content.sections?.hero?.secondaryButton?.sectionId || ''}
                                   onChange={(e) => updateField('sections.hero.secondaryButton.sectionId', e.target.value)}
-                                  className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                  placeholder=&quot;#section-id&quot;
+                                  className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                  placeholder="#section-id"
                                 />
-                                <div className=&quot;mt-2 p-3 bg-blue-50 rounded-md&quot;>
-                                  <p className=&quot;text-sm font-medium text-blue-900 mb-2&quot;>Available sections on this page:</p>
-                                  <div className=&quot;text-xs text-blue-700 space-y-1&quot;>
+                                <div className="mt-2 p-3 bg-blue-50 rounded-md">
+                                  <p className="text-sm font-medium text-blue-900 mb-2">Available sections on this page:</p>
+                                  <div className="text-xs text-blue-700 space-y-1">
                                     {getAvailableSections(activePage).map((section, index) => (
-                                      <div key={index}>• <code className=&quot;bg-blue-100 px-1 rounded&quot;>{section.id}</code> - {section.name}</div>
+                                      <div key={index}>• <code className="bg-blue-100 px-1 rounded">{section.id}</code> - {section.name}</div>
                                     ))}
                                   </div>
                                 </div>
@@ -441,105 +441,105 @@ export default function Admin() {
                             )}
                             {content.sections?.hero?.secondaryButton?.type === 'phone' && (
                               <div>
-                                <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Phone Number</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                                 <input
-                                  type=&quot;tel&quot;
+                                  type="tel"
                                   value={content.sections?.hero?.secondaryButton?.phone || ''}
                                   onChange={(e) => updateField('sections.hero.secondaryButton.phone', e.target.value)}
-                                  className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                  placeholder=&quot;+41791234567&quot;
+                                  className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                  placeholder="+41791234567"
                                 />
                               </div>
                             )}
                             {content.sections?.hero?.secondaryButton?.type === 'email' && (
                               <div>
-                                <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Email Address</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                                 <input
-                                  type=&quot;email&quot;
+                                  type="email"
                                   value={content.sections?.hero?.secondaryButton?.email || ''}
                                   onChange={(e) => updateField('sections.hero.secondaryButton.email', e.target.value)}
-                                  className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                                  placeholder=&quot;contact@example.com&quot;
+                                  className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                                  placeholder="contact@example.com"
                                 />
                               </div>
                             )}
                           </div>
                         </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Image Layout</label>
-                      <div className=&quot;mb-4&quot;>
-                        <label className=&quot;block text-xs font-medium text-gray-600 mb-1&quot;>Layout Type</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Image Layout</label>
+                      <div className="mb-4">
+                        <label className="block text-xs font-medium text-gray-600 mb-1">Layout Type</label>
                         <select
                           value={content.sections.hero.layoutType || 'single'}
                           onChange={(e) => updateField('sections.hero.layoutType', e.target.value)}
-                          className=&quot;w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900&quot;
+                          className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
                         >
-                          <option value=&quot;single&quot;>Single Image</option>
-                          <option value=&quot;collage&quot;>Collage (Multiple Images)</option>
+                          <option value="single">Single Image</option>
+                          <option value="collage">Collage (Multiple Images)</option>
                         </select>
                       </div>
                       
                       {content.sections.hero.layoutType === 'single' && (
-                        <div className=&quot;mb-4&quot;>
-                          <label className=&quot;block text-xs font-medium text-gray-600 mb-1&quot;>Image Orientation</label>
+                        <div className="mb-4">
+                          <label className="block text-xs font-medium text-gray-600 mb-1">Image Orientation</label>
                           <select
                             value={content.sections.hero.singleOrientation || 'landscape'}
                             onChange={(e) => updateField('sections.hero.singleOrientation', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
                           >
-                            <option value=&quot;portrait&quot;>Portrait (2:3)</option>
-                            <option value=&quot;landscape&quot;>Landscape (3:2)</option>
-                            <option value=&quot;square&quot;>Square (1:1)</option>
+                            <option value="portrait">Portrait (2:3)</option>
+                            <option value="landscape">Landscape (3:2)</option>
+                            <option value="square">Square (1:1)</option>
                           </select>
                         </div>
                       )}
                       
                       {content.sections.hero.layoutType === 'collage' && (
-                        <div className=&quot;mb-4&quot;>
-                          <label className=&quot;block text-xs font-medium text-gray-600 mb-1&quot;>Collage Layout</label>
+                        <div className="mb-4">
+                          <label className="block text-xs font-medium text-gray-600 mb-1">Collage Layout</label>
                           <select
                             value={content.sections.hero.collageLayout || 'layout1'}
                             onChange={(e) => updateField('sections.hero.collageLayout', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
                           >
-                            <option value=&quot;layout1&quot;>Layout 1: 2 Side-by-Side Landscape (3:2 container)</option>
-                            <option value=&quot;layout2&quot;>Layout 2: 2 Stacked Vertical Landscape (3:2 container)</option>
-                            <option value=&quot;layout3&quot;>Layout 3: 1 Portrait + 2 Landscape (3:2 container)</option>
-                            <option value=&quot;layout4&quot;>Layout 4: 3 Side-by-Side Portrait (3:2 container)</option>
+                            <option value="layout1">Layout 1: 2 Side-by-Side Landscape (3:2 container)</option>
+                            <option value="layout2">Layout 2: 2 Stacked Vertical Landscape (3:2 container)</option>
+                            <option value="layout3">Layout 3: 1 Portrait + 2 Landscape (3:2 container)</option>
+                            <option value="layout4">Layout 4: 3 Side-by-Side Portrait (3:2 container)</option>
                           </select>
                         </div>
                       )}
                       
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Images</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Images</label>
                       {content.sections.hero.images.map((image: Record<string, any>, index: number) => (
-                        <div key={index} className=&quot;mb-4 border border-gray-200 rounded-lg p-4&quot;>
-                          <h4 className=&quot;font-semibold text-gray-900 mb-2&quot;>Image {index + 1}</h4>
+                        <div key={index} className="mb-4 border border-gray-200 rounded-lg p-4">
+                          <h4 className="font-semibold text-gray-900 mb-2">Image {index + 1}</h4>
                           
                           {/* Image Path */}
-                          <div className=&quot;mb-3&quot;>
+                          <div className="mb-3">
                             <ImageInput
                               value={image.src}
                               onChange={(value) => updateField(`sections.hero.images.${index}.src`, value)}
-                              placeholder=&quot;/path/to/image.jpg&quot;
-                              label=&quot;Image Path&quot;
+                              placeholder="/path/to/image.jpg"
+                              label="Image Path"
                             />
                           </div>
                           
                           {/* Alt Text */}
-                          <div className=&quot;mb-3&quot;>
-                            <label className=&quot;block text-xs font-medium text-gray-600 mb-1&quot;>Alt Text</label>
+                          <div className="mb-3">
+                            <label className="block text-xs font-medium text-gray-600 mb-1">Alt Text</label>
                             <input
-                              type=&quot;text&quot;
+                              type="text"
                               value={image.alt}
                               onChange={(e) => updateField(`sections.hero.images.${index}.alt`, e.target.value)}
-                              className=&quot;w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900&quot;
-                              placeholder=&quot;Description for accessibility&quot;
+                              className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
+                              placeholder="Description for accessibility"
                             />
                           </div>
                           
                           {/* Visual Image Editor */}
-                          <div className=&quot;mb-3&quot;>
-                            <label className=&quot;block text-xs font-medium text-gray-600 mb-2&quot;>Image Editor</label>
+                          <div className="mb-3">
+                            <label className="block text-xs font-medium text-gray-600 mb-2">Image Editor</label>
                             <ImageEditor
                               src={image.src}
                               alt={image.alt}
@@ -561,56 +561,56 @@ export default function Admin() {
                 {activeSection === 'services' && content.sections.services && (
                   <>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Section Title</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Section Title</label>
                       <input
-                        type=&quot;text&quot;
+                        type="text"
                         value={content.sections.services.title}
                         onChange={(e) => updateField('sections.services.title', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                       />
                     </div>
                     {content.sections.services.cards.map((card: Record<string, any>, index: number) => (
-                      <div key={index} className=&quot;border border-gray-200 rounded-lg p-4&quot;>
-                        <h3 className=&quot;font-bold mb-2&quot;>Card {index + 1}</h3>
-                        <div className=&quot;space-y-2&quot;>
+                      <div key={index} className="border border-gray-200 rounded-lg p-4">
+                        <h3 className="font-bold mb-2">Card {index + 1}</h3>
+                        <div className="space-y-2">
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={card.title}
                             onChange={(e) => updateField(`sections.services.cards.${index}.title`, e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                            placeholder=&quot;Card title&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                            placeholder="Card title"
                           />
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={card.price}
                             onChange={(e) => updateField(`sections.services.cards.${index}.price`, e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                            placeholder=&quot;Price&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                            placeholder="Price"
                           />
                           <textarea
                             value={card.description}
                             onChange={(e) => updateField(`sections.services.cards.${index}.description`, e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                             rows={2}
-                            placeholder=&quot;Description&quot;
+                            placeholder="Description"
                           />
                           <ImageInput
                             value={card.image.src}
                             onChange={(value) => updateField(`sections.services.cards.${index}.image.src`, value)}
-                            placeholder=&quot;Image path&quot;
-                            label=&quot;Image Path&quot;
+                            placeholder="Image path"
+                            label="Image Path"
                           />
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={card.image.alt}
                             onChange={(e) => updateField(`sections.services.cards.${index}.image.alt`, e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md mb-1 text-gray-900 !text-gray-900&quot;
-                            placeholder=&quot;Alt text&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md mb-1 text-gray-900 !text-gray-900"
+                            placeholder="Alt text"
                           />
                           
                           {/* Visual Image Editor */}
-                          <div className=&quot;mb-3&quot;>
-                            <label className=&quot;block text-xs font-medium text-gray-600 mb-2&quot;>Image Editor</label>
+                          <div className="mb-3">
+                            <label className="block text-xs font-medium text-gray-600 mb-2">Image Editor</label>
                             <ImageEditor
                               src={card.image.src}
                               alt={card.image.alt}
@@ -632,47 +632,47 @@ export default function Admin() {
                 {activeSection === 'social' && content.sections.social && (
                   <>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Title</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Title</label>
                       <input
-                        type=&quot;text&quot;
+                        type="text"
                         value={content.sections.social.title}
                         onChange={(e) => updateField('sections.social.title', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                       />
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Description</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
                       <textarea
                         value={content.sections.social.description}
                         onChange={(e) => updateField('sections.social.description', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                         rows={3}
                       />
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Price</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Price</label>
                       <input
-                        type=&quot;text&quot;
+                        type="text"
                         value={content.sections.social.price}
                         onChange={(e) => updateField('sections.social.price', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                       />
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Button Text</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Button Text</label>
                       <input
-                        type=&quot;text&quot;
+                        type="text"
                         value={content.sections?.social?.button?.text || ''}
                         onChange={(e) => updateField('sections.social.button.text', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                       />
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Features (one per line)</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Features (one per line)</label>
                       <textarea
                         value={content.sections.social.features.join('\n')}
                         onChange={(e) => updateField('sections.social.features', e.target.value.split('\n'))}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                         rows={4}
                       />
                     </div>
@@ -680,22 +680,22 @@ export default function Admin() {
                       <ImageInput
                         value={content.sections.social.image.src}
                         onChange={(value) => updateField('sections.social.image.src', value)}
-                        placeholder=&quot;/image.jpg&quot;
-                        label=&quot;Image Source&quot;
+                        placeholder="/image.jpg"
+                        label="Image Source"
                       />
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Image Alt Text</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Image Alt Text</label>
                       <input
-                        type=&quot;text&quot;
+                        type="text"
                         value={content.sections.social.image.alt}
                         onChange={(e) => updateField('sections.social.image.alt', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                        placeholder=&quot;Description de l'image&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                        placeholder="Description de l'image"
                       />
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Image Editor</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Image Editor</label>
                       <ImageEditor
                         src={content.sections.social.image.src}
                         alt={content.sections.social.image.alt}
@@ -714,30 +714,30 @@ export default function Admin() {
                 {activeSection === 'process' && content.sections.process && (
                   <>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Section Title</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Section Title</label>
                       <input
-                        type=&quot;text&quot;
+                        type="text"
                         value={content.sections.process.title}
                         onChange={(e) => updateField('sections.process.title', e.target.value)}
-                        className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                       />
                     </div>
                     {content.sections.process.steps.map((step: Record<string, any>, index: number) => (
-                      <div key={index} className=&quot;border border-gray-200 rounded-lg p-4&quot;>
-                        <h3 className=&quot;font-bold mb-2&quot;>Step {index + 1}</h3>
-                        <div className=&quot;space-y-2&quot;>
+                      <div key={index} className="border border-gray-200 rounded-lg p-4">
+                        <h3 className="font-bold mb-2">Step {index + 1}</h3>
+                        <div className="space-y-2">
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={step.title}
                             onChange={(e) => updateField(`sections.process.steps.${index}.title`, e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                            placeholder=&quot;Step title&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                            placeholder="Step title"
                           />
                           <textarea
                             value={step.description}
                             onChange={(e) => updateField(`sections.process.steps.${index}.description`, e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
-                            placeholder=&quot;Step description&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
+                            placeholder="Step description"
                             rows={2}
                           />
                         </div>
@@ -750,98 +750,98 @@ export default function Admin() {
                     {activeSection === 'hero' && content.sections.hero && (
                       <>
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Title</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Title</label>
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={content.sections.hero.title}
                             onChange={(e) => updateField('sections.hero.title', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                           />
                         </div>
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Description</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
                           <textarea
                             value={content.sections.hero.description}
                             onChange={(e) => updateField('sections.hero.description', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                             rows={3}
                           />
                         </div>
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Image Layout</label>
-                          <div className=&quot;mb-4&quot;>
-                            <label className=&quot;block text-xs font-medium text-gray-600 mb-1&quot;>Layout Type</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Image Layout</label>
+                          <div className="mb-4">
+                            <label className="block text-xs font-medium text-gray-600 mb-1">Layout Type</label>
                             <select
                               value={content.sections.hero.layoutType || 'single'}
                               onChange={(e) => updateField('sections.hero.layoutType', e.target.value)}
-                              className=&quot;w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900&quot;
+                              className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
                             >
-                              <option value=&quot;single&quot;>Single Image</option>
-                              <option value=&quot;collage&quot;>Collage (Multiple Images)</option>
+                              <option value="single">Single Image</option>
+                              <option value="collage">Collage (Multiple Images)</option>
                             </select>
                           </div>
 
                           {content.sections.hero.layoutType === 'single' && (
-                            <div className=&quot;mb-4&quot;>
-                              <label className=&quot;block text-xs font-medium text-gray-600 mb-1&quot;>Image Orientation</label>
+                            <div className="mb-4">
+                              <label className="block text-xs font-medium text-gray-600 mb-1">Image Orientation</label>
                               <select
                                 value={content.sections.hero.singleOrientation || 'landscape'}
                                 onChange={(e) => updateField('sections.hero.singleOrientation', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
                               >
-                                <option value=&quot;portrait&quot;>Portrait (2:3)</option>
-                                <option value=&quot;landscape&quot;>Landscape (3:2)</option>
-                                <option value=&quot;square&quot;>Square (1:1)</option>
+                                <option value="portrait">Portrait (2:3)</option>
+                                <option value="landscape">Landscape (3:2)</option>
+                                <option value="square">Square (1:1)</option>
                               </select>
                             </div>
                           )}
 
                           {content.sections.hero.layoutType === 'collage' && (
-                            <div className=&quot;mb-4&quot;>
-                              <label className=&quot;block text-xs font-medium text-gray-600 mb-1&quot;>Collage Layout</label>
+                            <div className="mb-4">
+                              <label className="block text-xs font-medium text-gray-600 mb-1">Collage Layout</label>
                               <select
                                 value={content.sections.hero.collageLayout || 'layout1'}
                                 onChange={(e) => updateField('sections.hero.collageLayout', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
                               >
-                                <option value=&quot;layout1&quot;>Layout 1: 2 Side-by-Side Landscape (3:2 container)</option>
-                                <option value=&quot;layout2&quot;>Layout 2: 2 Stacked Vertical Landscape (3:2 container)</option>
-                                <option value=&quot;layout3&quot;>Layout 3: 1 Portrait + 2 Landscape (3:2 container)</option>
-                                <option value=&quot;layout4&quot;>Layout 4: 3 Side-by-Side Portrait (3:2 container)</option>
+                                <option value="layout1">Layout 1: 2 Side-by-Side Landscape (3:2 container)</option>
+                                <option value="layout2">Layout 2: 2 Stacked Vertical Landscape (3:2 container)</option>
+                                <option value="layout3">Layout 3: 1 Portrait + 2 Landscape (3:2 container)</option>
+                                <option value="layout4">Layout 4: 3 Side-by-Side Portrait (3:2 container)</option>
                               </select>
                             </div>
                           )}
 
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Images</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Images</label>
                           {content.sections.hero.images.map((image: Record<string, any>, index: number) => (
-                            <div key={index} className=&quot;mb-4 border border-gray-200 rounded-lg p-4&quot;>
-                              <h4 className=&quot;font-semibold text-gray-900 mb-2&quot;>Image {index + 1}</h4>
+                            <div key={index} className="mb-4 border border-gray-200 rounded-lg p-4">
+                              <h4 className="font-semibold text-gray-900 mb-2">Image {index + 1}</h4>
 
                               {/* Image Path */}
-                              <div className=&quot;mb-3&quot;>
+                              <div className="mb-3">
                                 <ImageInput
                                   value={image.src}
                                   onChange={(value) => updateField(`sections.hero.images.${index}.src`, value)}
-                                  placeholder=&quot;/path/to/image.jpg&quot;
-                                  label=&quot;Image Path&quot;
+                                  placeholder="/path/to/image.jpg"
+                                  label="Image Path"
                                 />
                               </div>
 
                               {/* Alt Text */}
-                              <div className=&quot;mb-3&quot;>
-                                <label className=&quot;block text-xs font-medium text-gray-600 mb-1&quot;>Alt Text</label>
+                              <div className="mb-3">
+                                <label className="block text-xs font-medium text-gray-600 mb-1">Alt Text</label>
                                 <input
-                                  type=&quot;text&quot;
+                                  type="text"
                                   value={image.alt}
                                   onChange={(e) => updateField(`sections.hero.images.${index}.alt`, e.target.value)}
-                                  className=&quot;w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900&quot;
-                                  placeholder=&quot;Description for accessibility&quot;
+                                  className="w-full p-2 border border-gray-300 rounded-md text-sm text-gray-900"
+                                  placeholder="Description for accessibility"
                                 />
                               </div>
 
                               {/* Visual Image Editor */}
-                              <div className=&quot;mb-3&quot;>
-                                <label className=&quot;block text-xs font-medium text-gray-600 mb-2&quot;>Image Editor</label>
+                              <div className="mb-3">
+                                <label className="block text-xs font-medium text-gray-600 mb-2">Image Editor</label>
                                 <ImageEditor
                                   src={image.src}
                                   alt={image.alt}
@@ -864,118 +864,118 @@ export default function Admin() {
                     {activeSection === 'contactForm' && content.sections.contactForm && (
                       <>
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Title</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Title</label>
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={content.sections.contactForm.title}
                             onChange={(e) => updateField('sections.contactForm.title', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                           />
                         </div>
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Description</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
                           <textarea
                             value={content.sections.contactForm.description}
                             onChange={(e) => updateField('sections.contactForm.description', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                             rows={3}
                           />
                         </div>
 
                         {/* Form Fields */}
-                        <div className=&quot;border border-gray-200 rounded-lg p-4&quot;>
-                          <h4 className=&quot;font-semibold text-gray-900 mb-3&quot;>Champs du formulaire</h4>
-                          <div className=&quot;space-y-3&quot;>
+                        <div className="border border-gray-200 rounded-lg p-4">
+                          <h4 className="font-semibold text-gray-900 mb-3">Champs du formulaire</h4>
+                          <div className="space-y-3">
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Nom - Label</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-1">Nom - Label</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.contactForm?.form?.name?.label || ''}
                                 onChange={(e) => updateField('sections.contactForm.form.name.label', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                               />
                             </div>
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Nom - Placeholder</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-1">Nom - Placeholder</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.contactForm?.form?.name?.placeholder || ''}
                                 onChange={(e) => updateField('sections.contactForm.form.name.placeholder', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                               />
                             </div>
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Email - Label</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-1">Email - Label</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.contactForm?.form?.email?.label || ''}
                                 onChange={(e) => updateField('sections.contactForm.form.email.label', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                               />
                             </div>
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Email - Placeholder</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-1">Email - Placeholder</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.contactForm?.form?.email?.placeholder || ''}
                                 onChange={(e) => updateField('sections.contactForm.form.email.placeholder', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                               />
                             </div>
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Téléphone - Label</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-1">Téléphone - Label</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.contactForm?.form?.phone?.label || ''}
                                 onChange={(e) => updateField('sections.contactForm.form.phone.label', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                               />
                             </div>
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Téléphone - Placeholder</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-1">Téléphone - Placeholder</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.contactForm?.form?.phone?.placeholder || ''}
                                 onChange={(e) => updateField('sections.contactForm.form.phone.placeholder', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                               />
                             </div>
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Message - Label</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-1">Message - Label</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.contactForm?.form?.message?.label || ''}
                                 onChange={(e) => updateField('sections.contactForm.form.message.label', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                               />
                             </div>
                             <div>
-                              <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Message - Placeholder</label>
+                              <label className="block text-sm font-medium text-gray-700 mb-1">Message - Placeholder</label>
                               <input
-                                type=&quot;text&quot;
+                                type="text"
                                 value={content.sections?.contactForm?.form?.message?.placeholder || ''}
                                 onChange={(e) => updateField('sections.contactForm.form.message.placeholder', e.target.value)}
-                                className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                                className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                               />
                             </div>
                           </div>
                         </div>
 
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Button Text</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Button Text</label>
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={content.sections?.contactForm?.form?.button?.text || ''}
                             onChange={(e) => updateField('sections.contactForm.form.button.text', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                           />
                         </div>
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Legal Text</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Legal Text</label>
                           <textarea
                             value={content.sections?.contactForm?.form?.legal || ''}
                             onChange={(e) => updateField('sections.contactForm.form.legal', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                             rows={2}
                           />
                         </div>
@@ -986,16 +986,16 @@ export default function Admin() {
                     {activeSection === 'info' && content.sections.info && (
                       <>
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Title</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Title</label>
                           <input
-                            type=&quot;text&quot;
+                            type="text"
                             value={content.sections.info.title}
                             onChange={(e) => updateField('sections.info.title', e.target.value)}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                           />
                         </div>
                         <div>
-                          <label className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>Items (one per line)</label>
+                          <label className="block text-sm font-medium text-gray-700 mb-2">Items (one per line)</label>
                           <textarea
                             value={content.sections.info.items.map((item: Record<string, any>) => `${item.title}: ${item.description}`).join('\n')}
                             onChange={(e) => {
@@ -1009,64 +1009,64 @@ export default function Admin() {
                               });
                               updateField('sections.info.items', items);
                             }}
-                            className=&quot;w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900&quot;
+                            className="w-full p-2 border border-gray-300 rounded-md text-gray-900 !text-gray-900"
                             rows={6}
-                            placeholder=&quot;Zone de service: Morges – Nyon – Lausanne et environs&quot;
+                            placeholder="Zone de service: Morges – Nyon – Lausanne et environs"
                           />
                         </div>
                       </>
                     )}
               </div>
             ) : (
-              <div className=&quot;text-gray-900&quot;>
-                Click &quot;Edit&quot; to modify content
+              <div className="text-gray-900">
+                Click "Edit" to modify content
               </div>
             )}
           </div>
 
           {/* Preview Panel */}
-          <div className=&quot;bg-white rounded-lg shadow-sm p-6&quot;>
-            <h2 className=&quot;text-xl font-bold text-gray-900 mb-4&quot;>Preview</h2>
-            <div className=&quot;border border-gray-200 rounded-lg p-4&quot;>
+          <div className="bg-white rounded-lg shadow-sm p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Preview</h2>
+            <div className="border border-gray-200 rounded-lg p-4">
               {/* Page Settings Preview */}
               {activeSection === 'pageSettings' && (
-                <div className=&quot;space-y-4&quot;>
-                  <h2 className=&quot;text-xl font-bold text-gray-900&quot;>Aperçu des paramètres</h2>
-                  <div className=&quot;space-y-3&quot;>
+                <div className="space-y-4">
+                  <h2 className="text-xl font-bold text-gray-900">Aperçu des paramètres</h2>
+                  <div className="space-y-3">
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Titre du menu</label>
-                      <p className=&quot;text-gray-900 bg-gray-100 p-2 rounded&quot;>{content.menuTitle || 'Non défini'}</p>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Titre du menu</label>
+                      <p className="text-gray-900 bg-gray-100 p-2 rounded">{content.menuTitle || 'Non défini'}</p>
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Titre SEO</label>
-                      <p className=&quot;text-gray-900 bg-gray-100 p-2 rounded&quot;>{content.seoTitle || 'Non défini'}</p>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Titre SEO</label>
+                      <p className="text-gray-900 bg-gray-100 p-2 rounded">{content.seoTitle || 'Non défini'}</p>
                     </div>
                     <div>
-                      <label className=&quot;block text-sm font-medium text-gray-700 mb-1&quot;>Description SEO</label>
-                      <p className=&quot;text-gray-900 bg-gray-100 p-2 rounded&quot;>{content.seoDescription || 'Non définie'}</p>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Description SEO</label>
+                      <p className="text-gray-900 bg-gray-100 p-2 rounded">{content.seoDescription || 'Non définie'}</p>
                     </div>
                   </div>
                 </div>
               )}
               
               {activeSection === 'hero' && content.sections.hero && (
-                <div className=&quot;space-y-4&quot;>
-                  <p className=&quot;text-sm text-gray-500 uppercase font-semibold&quot;>{content.sections.hero.label}</p>
-                  <h1 className=&quot;text-2xl font-bold text-gray-900&quot;>{content.sections.hero.title}</h1>
-                  <p className=&quot;text-gray-700&quot;>{content.sections.hero.description}</p>
-                      <div className=&quot;flex space-x-4&quot;>
-                        <button className=&quot;bg-gray-900 text-white px-4 py-2 rounded-md text-sm&quot;>
+                <div className="space-y-4">
+                  <p className="text-sm text-gray-500 uppercase font-semibold">{content.sections.hero.label}</p>
+                  <h1 className="text-2xl font-bold text-gray-900">{content.sections.hero.title}</h1>
+                  <p className="text-gray-700">{content.sections.hero.description}</p>
+                      <div className="flex space-x-4">
+                        <button className="bg-gray-900 text-white px-4 py-2 rounded-md text-sm">
                           {content.sections?.hero?.primaryButton?.text || 'Primary Button'}
                         </button>
-                        <button className=&quot;border border-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm&quot;>
+                        <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm">
                           {content.sections?.hero?.secondaryButton?.text || 'Secondary Button'}
                         </button>
                       </div>
-                      <div className=&quot;mt-2 text-xs text-gray-500&quot;>
+                      <div className="mt-2 text-xs text-gray-500">
                         <div>Primary: {content.sections?.hero?.primaryButton?.type || 'link'} - {content.sections?.hero?.primaryButton?.href || content.sections?.hero?.primaryButton?.sectionId || content.sections?.hero?.primaryButton?.phone || content.sections?.hero?.primaryButton?.email || 'No target'}</div>
                         <div>Secondary: {content.sections?.hero?.secondaryButton?.type || 'link'} - {content.sections?.hero?.secondaryButton?.href || content.sections?.hero?.secondaryButton?.sectionId || content.sections?.hero?.secondaryButton?.phone || content.sections?.hero?.secondaryButton?.email || 'No target'}</div>
                       </div>
-                  <div className=&quot;mt-4&quot;>
+                  <div className="mt-4">
                     <FlexibleImageContainer
                       images={content.sections.hero.images}
                       layoutType={content.sections.hero.layoutType || 'single'}
@@ -1078,9 +1078,9 @@ export default function Admin() {
               )}
               
               {activeSection === 'services' && content.sections.services && (
-                <div className=&quot;space-y-4&quot;>
-                  <h2 className=&quot;text-xl font-bold text-gray-900&quot;>{content.sections.services.title}</h2>
-                  <div className=&quot;grid grid-cols-1 gap-4&quot;>
+                <div className="space-y-4">
+                  <h2 className="text-xl font-bold text-gray-900">{content.sections.services.title}</h2>
+                  <div className="grid grid-cols-1 gap-4">
                     {content.sections.services.cards && content.sections.services.cards.map((card: Record<string, any>, index: number) => (
                       <ServiceCard
                         key={index}
@@ -1097,17 +1097,17 @@ export default function Admin() {
               
               {/* Social Preview */}
               {activeSection === 'social' && content.sections.social && (
-                <div className=&quot;space-y-4&quot;>
-                  <h2 className=&quot;text-xl font-bold text-gray-900&quot;>{content.sections.social.title}</h2>
-                  <p className=&quot;text-gray-700&quot;>{content.sections.social.description}</p>
-                  <ul className=&quot;list-disc list-inside space-y-1&quot;>
+                <div className="space-y-4">
+                  <h2 className="text-xl font-bold text-gray-900">{content.sections.social.title}</h2>
+                  <p className="text-gray-700">{content.sections.social.description}</p>
+                  <ul className="list-disc list-inside space-y-1">
                     {content.sections.social.features.map((feature: string, index: number) => (
-                      <li key={index} className=&quot;text-gray-600&quot;>{feature}</li>
+                      <li key={index} className="text-gray-600">{feature}</li>
                     ))}
                   </ul>
-                  <div className=&quot;flex items-center justify-between&quot;>
-                    <span className=&quot;text-lg font-semibold text-gray-900&quot;>{content.sections.social.price}</span>
-                    <button className=&quot;bg-blue-600 text-white px-4 py-2 rounded-md text-sm&quot;>
+                  <div className="flex items-center justify-between">
+                    <span className="text-lg font-semibold text-gray-900">{content.sections.social.price}</span>
+                    <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm">
                       {content.sections?.social?.button?.text || 'Button'}
                     </button>
                   </div>
@@ -1116,17 +1116,17 @@ export default function Admin() {
               
               {/* Process Preview */}
               {activeSection === 'process' && content.sections.process && (
-                <div className=&quot;space-y-4&quot;>
-                  <h2 className=&quot;text-xl font-bold text-gray-900&quot;>{content.sections.process.title}</h2>
-                  <div className=&quot;space-y-3&quot;>
+                <div className="space-y-4">
+                  <h2 className="text-xl font-bold text-gray-900">{content.sections.process.title}</h2>
+                  <div className="space-y-3">
                     {content.sections.process.steps.map((step: Record<string, any>, index: number) => (
-                      <div key={index} className=&quot;flex items-start space-x-3&quot;>
-                        <div className=&quot;flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold&quot;>
+                      <div key={index} className="flex items-start space-x-3">
+                        <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                           {index + 1}
                         </div>
                         <div>
-                          <h3 className=&quot;font-semibold text-gray-900&quot;>{step.title}</h3>
-                          <p className=&quot;text-gray-600&quot;>{step.description}</p>
+                          <h3 className="font-semibold text-gray-900">{step.title}</h3>
+                          <p className="text-gray-600">{step.description}</p>
                         </div>
                       </div>
                     ))}
@@ -1136,10 +1136,10 @@ export default function Admin() {
               
                   {/* Contact Hero Preview */}
                   {activeSection === 'hero' && content.sections.hero && (
-                    <div className=&quot;space-y-4&quot;>
-                      <h2 className=&quot;text-xl font-bold text-gray-900&quot;>{content.sections.hero.title}</h2>
-                      <p className=&quot;text-gray-700&quot;>{content.sections.hero.description}</p>
-                      <div className=&quot;mt-4&quot;>
+                    <div className="space-y-4">
+                      <h2 className="text-xl font-bold text-gray-900">{content.sections.hero.title}</h2>
+                      <p className="text-gray-700">{content.sections.hero.description}</p>
+                      <div className="mt-4">
                         <FlexibleImageContainer
                           images={content.sections.hero.images}
                           layoutType={content.sections.hero.layoutType || 'single'}
@@ -1152,43 +1152,43 @@ export default function Admin() {
 
                   {/* Contact Form Preview */}
                   {activeSection === 'contactForm' && content.sections.contactForm && (
-                    <div className=&quot;space-y-4&quot;>
-                      <h2 className=&quot;text-xl font-bold text-gray-900&quot;>{content.sections.contactForm.title}</h2>
-                      <p className=&quot;text-gray-700&quot;>{content.sections.contactForm.description}</p>
-                      <div className=&quot;border border-gray-300 rounded-lg p-4&quot;>
-                        <div className=&quot;space-y-3&quot;>
-                          <div className=&quot;grid grid-cols-2 gap-3&quot;>
+                    <div className="space-y-4">
+                      <h2 className="text-xl font-bold text-gray-900">{content.sections.contactForm.title}</h2>
+                      <p className="text-gray-700">{content.sections.contactForm.description}</p>
+                      <div className="border border-gray-300 rounded-lg p-4">
+                        <div className="space-y-3">
+                          <div className="grid grid-cols-2 gap-3">
                             <input
-                              type=&quot;text&quot;
+                              type="text"
                               placeholder={content.sections?.contactForm?.form?.name?.placeholder || 'Nom'}
-                              className=&quot;w-full p-2 border border-gray-200 rounded-md text-gray-900&quot;
+                              className="w-full p-2 border border-gray-200 rounded-md text-gray-900"
                               disabled
                             />
                             <input
-                              type=&quot;email&quot;
+                              type="email"
                               placeholder={content.sections?.contactForm?.form?.email?.placeholder || 'Email'}
-                              className=&quot;w-full p-2 border border-gray-200 rounded-md text-gray-900&quot;
+                              className="w-full p-2 border border-gray-200 rounded-md text-gray-900"
                               disabled
                             />
                           </div>
                           <input
-                            type=&quot;tel&quot;
+                            type="tel"
                             placeholder={content.sections?.contactForm?.form?.phone?.placeholder || 'Téléphone'}
-                            className=&quot;w-full p-2 border border-gray-200 rounded-md text-gray-900&quot;
+                            className="w-full p-2 border border-gray-200 rounded-md text-gray-900"
                             disabled
                           />
                           <textarea
                             placeholder={content.sections?.contactForm?.form?.message?.placeholder || 'Message'}
-                            className=&quot;w-full p-2 border border-gray-200 rounded-md text-gray-900&quot;
+                            className="w-full p-2 border border-gray-200 rounded-md text-gray-900"
                             rows={4}
                             disabled
                           />
                         </div>
-                        <div className=&quot;mt-3 flex justify-between items-center&quot;>
-                          <button className=&quot;bg-blue-600 text-white px-4 py-2 rounded-md text-sm&quot;>
+                        <div className="mt-3 flex justify-between items-center">
+                          <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm">
                             {content.sections?.contactForm?.form?.button?.text || 'Button'}
                           </button>
-                          <p className=&quot;text-xs text-gray-500&quot;>{content.sections?.contactForm?.form?.legal || ''}</p>
+                          <p className="text-xs text-gray-500">{content.sections?.contactForm?.form?.legal || ''}</p>
                         </div>
                       </div>
                     </div>
@@ -1196,13 +1196,13 @@ export default function Admin() {
 
                   {/* Contact Info Preview */}
                   {activeSection === 'info' && content.sections.info && (
-                    <div className=&quot;space-y-4&quot;>
-                      <h2 className=&quot;text-xl font-bold text-gray-900&quot;>{content.sections.info.title}</h2>
-                      <div className=&quot;space-y-3&quot;>
+                    <div className="space-y-4">
+                      <h2 className="text-xl font-bold text-gray-900">{content.sections.info.title}</h2>
+                      <div className="space-y-3">
                         {content.sections.info.items.map((item: Record<string, any>, index: number) => (
-                          <div key={index} className=&quot;border border-gray-200 rounded-lg p-4&quot;>
-                            <h3 className=&quot;font-semibold text-gray-900&quot;>{item.title}</h3>
-                            <p className=&quot;text-gray-600&quot;>{item.description}</p>
+                          <div key={index} className="border border-gray-200 rounded-lg p-4">
+                            <h3 className="font-semibold text-gray-900">{item.title}</h3>
+                            <p className="text-gray-600">{item.description}</p>
                           </div>
                         ))}
                       </div>

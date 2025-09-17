@@ -1,6 +1,6 @@
-import Link from &apos;next/link&apos;;
-import Navigation from &apos;@/components/Navigation&apos;;
-import Image from &apos;next/image&apos;;
+import Link from 'next/link';
+import Navigation from '@/components/Navigation';
+import Image from 'next/image';
 
 export default function Evenements() {
   return (
@@ -15,7 +15,7 @@ export default function Evenements() {
             Moments vrais, souvenirs qui restent
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Anniversaires, baptêmes, fêtes familiales... Je capture l&apos;authenticité et l&apos;ambiance chaleureuse 
+            Anniversaires, baptêmes, fêtes familiales... Je capture l'authenticité et l'ambiance chaleureuse 
             de vos moments précieux avec discrétion et bienveillance.
           </p>
           <div className="flex space-x-4">
@@ -66,7 +66,7 @@ export default function Evenements() {
           <div className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Intime</h3>
             <p className="text-lg text-gray-700 mb-4">290 CHF (2h)</p>
-            <p className="text-gray-600 mb-6">Petits événements familiaux, anniversaires intimes, jusqu&apos;à 15 personnes.</p>
+            <p className="text-gray-600 mb-6">Petits événements familiaux, anniversaires intimes, jusqu'à 15 personnes.</p>
             <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-blue-700 transition-colors mt-auto">
               Réserver
             </Link>
@@ -75,7 +75,7 @@ export default function Evenements() {
           <div className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Familial</h3>
             <p className="text-lg text-gray-700 mb-4">490 CHF (4h)</p>
-            <p className="text-gray-600 mb-6">Baptêmes, communions, fêtes familiales, jusqu&apos;à 30 personnes.</p>
+            <p className="text-gray-600 mb-6">Baptêmes, communions, fêtes familiales, jusqu'à 30 personnes.</p>
             <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-blue-700 transition-colors mt-auto">
               Réserver
             </Link>
@@ -84,7 +84,7 @@ export default function Evenements() {
           <div className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Prestige</h3>
             <p className="text-lg text-gray-700 mb-4">690 CHF (6h)</p>
-            <p className="text-gray-600 mb-6">Grands événements, mariages, fêtes d&apos;entreprise, jusqu&apos;à 50 personnes.</p>
+            <p className="text-gray-600 mb-6">Grands événements, mariages, fêtes d'entreprise, jusqu'à 50 personnes.</p>
             <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-md text-base font-medium hover:bg-blue-700 transition-colors mt-auto">
               Réserver
             </Link>
@@ -96,10 +96,10 @@ export default function Evenements() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
         <div className="md:w-1/2">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pourquoi choisir A3H ?</h2>
-          <p className="text-lg text-gray-700 mb-6">Une approche discrète et bienveillante pour capturer l&apos;authenticité de vos moments.</p>
+          <p className="text-lg text-gray-700 mb-6">Une approche discrète et bienveillante pour capturer l'authenticité de vos moments.</p>
           <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
             <li>Photographie discrète et naturelle</li>
-            <li>Capturer l&apos;authenticité des moments</li>
+            <li>Capturer l'authenticité des moments</li>
             <li>Ambiance chaleureuse et détendue</li>
             <li>Livraison rapide (J+2)</li>
             <li>Galerie privée sécurisée</li>
@@ -127,7 +127,7 @@ export default function Evenements() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">1. Échange</h3>
-            <p className="text-gray-600">On discute de votre événement, vos attentes et l&apos;ambiance souhaitée.</p>
+            <p className="text-gray-600">On discute de votre événement, vos attentes et l'ambiance souhaitée.</p>
           </div>
           <div className="border border-gray-200 rounded-lg p-6 flex flex-col items-center text-center">
             <h3 className="text-xl font-bold text-gray-900 mb-2">2. Événement</h3>
@@ -149,7 +149,7 @@ export default function Evenements() {
             <textarea
               className="w-full p-4 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
               rows={5}
-              placeholder="Décrivez votre événement (type, date, nombre d&apos;invités, ambiance souhaitée)..."
+              placeholder="Décrivez votre événement (type, date, nombre d'invités, ambiance souhaitée)..."
             ></textarea>
             <button className="bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition-colors w-full md:w-auto">
               Envoyer ma demande
