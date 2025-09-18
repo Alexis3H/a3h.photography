@@ -26,10 +26,14 @@ export default function FlexibleImageContainer({
 }: FlexibleImageContainerProps) {
   
   const getObjectPosition = (image: ImageItem) => {
+    // Prioritize focusPoint over customFocusPoint for consistency
+    if (image.focusPoint) {
+      return image.focusPoint;
+    }
     if (image.customFocusPoint) {
       return image.customFocusPoint;
     }
-    return image.focusPoint || 'center';
+    return 'center';
   };
 
   // Single image layout

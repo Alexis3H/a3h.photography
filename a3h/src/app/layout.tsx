@@ -1,23 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { getDefaultMetadata } from "../lib/metadata";
 
-export const metadata: Metadata = {
-  title: "A3H Photography - Photographe à Morges et la Côte",
-  description: "Photographe professionnel à Morges, Nyon et Lausanne. Headshots, restaurants et événements privés. Livraison express J+0/J+1, studio mobile.",
-  keywords: "photographe, Morges, Nyon, Lausanne, headshots, portraits, restaurants, événements, studio mobile",
-  authors: [{ name: "Alexis3H" }],
-  creator: "A3H Photography",
-  publisher: "A3H Photography",
-  robots: "index, follow",
-  openGraph: {
-    type: "website",
-    locale: "fr_CH",
-    url: "https://a3h.photography",
-    siteName: "A3H Photography",
-    title: "A3H Photography - Photographe à Morges et la Côte",
-    description: "Photographe professionnel à Morges, Nyon et Lausanne. Headshots, restaurants et événements privés.",
-  },
-};
+export const metadata: Metadata = getDefaultMetadata();
 
 export default function RootLayout({
   children,

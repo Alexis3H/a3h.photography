@@ -22,13 +22,13 @@
       },
       "images": [
         {
-          "src": "/headshot1.jpg",
+          "src": "/uploads/DSCF0475-2.jpg",
           "alt": "Portrait professionnel",
           "focusPoint": "center",
           "zoom": 1
         },
         {
-          "src": "/headshot2.jpg",
+          "src": "/uploads/NDS_0040-2.jpg",
           "alt": "Portrait LinkedIn",
           "focusPoint": "center",
           "zoom": 1
@@ -43,7 +43,7 @@
           "price": "190 CHF (30 min)",
           "description": "1 look, 5-8 photos retouchées, livraison J+0. Parfait pour LinkedIn.",
           "image": {
-            "src": "/express-headshot.jpg",
+            "src": "/uploads/DSCF0475-2.jpg",
             "alt": "Express Headshot",
             "focusPoint": "center",
             "zoom": 1
@@ -58,7 +58,7 @@
           "price": "290 CHF (1h)",
           "description": "2 looks, 10-15 photos retouchées, coaching personnalisé, livraison J+1.",
           "image": {
-            "src": "/professional-headshot.jpg",
+            "src": "/uploads/NDS_0040-2.jpg",
             "alt": "Professionnel Headshot",
             "focusPoint": "center",
             "zoom": 1
@@ -73,7 +73,7 @@
           "price": "À partir de 150 CHF/personne",
           "description": "Photos d'équipe cohérentes, retouches uniformes, livraison rapide.",
           "image": {
-            "src": "/team-headshot.jpg",
+            "src": "/uploads/_DSC3983.jpg",
             "alt": "Équipe Headshot",
             "focusPoint": "center",
             "zoom": 1
@@ -84,6 +84,25 @@
           }
         }
       ]
+    },
+    "social": {
+      "title": "Pack Réseaux Sociaux",
+      "description": "Des photos professionnelles pour vos réseaux sociaux et votre communication digitale.",
+      "features": [
+        "Photos optimisées pour LinkedIn, Instagram, Facebook",
+        "Plusieurs formats et orientations",
+        "Retouches naturelles et professionnelles",
+        "Livraison express J+0/J+1"
+      ],
+      "price": "À partir de 150 CHF",
+      "button": {
+        "text": "Réserver",
+        "href": "/contact"
+      },
+      "image": {
+        "src": "/uploads/_DSC3983.jpg",
+        "alt": "Pack réseaux sociaux headshots"
+      }
     },
     "process": {
       "title": "Comment ça marche ?",

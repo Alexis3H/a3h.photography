@@ -4,10 +4,42 @@ import ServiceCard from '../../components/ServiceCard';
 import FeatureImage from '../../components/FeatureImage';
 import FlexibleImageContainer from '../../components/FlexibleImageContainer';
 import Button from '@/components/Button';
-import { loadHomepageContent } from '../../lib/content';
+export const dynamic = 'force-dynamic';
 
-export default function Home() {
-  const content = loadHomepageContent();
+export default async function Home() {
+  console.log('Homepage component rendering...');
+  
+  // Call the API directly instead of using content.ts
+  let content = null;
+  try {
+    const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+    console.log('Fetching homepage content from API:', baseUrl);
+    const response = await fetch(`${baseUrl}/api/content/homepage`, {
+      cache: 'no-store'
+    });
+    if (response.ok) {
+      content = await response.json();
+      console.log('Homepage content loaded from API:', content?.menuTitle);
+    } else {
+      console.log('API response not ok:', response.status);
+    }
+  } catch (error) {
+    console.log('Error fetching from API:', error);
+  }
+  
+  // Fallback to local file if API fails
+  if (!content) {
+    try {
+      const fs = require('fs');
+      const path = require('path');
+      const contentPath = path.join(process.cwd(), 'src', 'content', 'homepage.json');
+      const fileContent = fs.readFileSync(contentPath, 'utf8');
+      content = JSON.parse(fileContent);
+      console.log('Homepage content loaded from file:', content?.menuTitle);
+    } catch (error) {
+      console.log('Error loading from file:', error);
+    }
+  }
   
   if (!content) {
     return <div>Error loading content</div>;

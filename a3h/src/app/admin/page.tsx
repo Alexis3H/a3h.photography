@@ -12,6 +12,9 @@ export default function Admin() {
   const [activeSection, setActiveSection] = useState('hero');
   const [activePage, setActivePage] = useState('homepage');
   const [isEditing, setIsEditing] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
 
   // Helper function to get available sections for the current page
   const getAvailableSections = (page: string) => {
@@ -29,19 +32,22 @@ export default function Admin() {
         { id: '#faq', name: 'FAQ section' }
       ],
       'headshots': [
-        { id: '#packages', name: 'Packages section' },
-        { id: '#gallery', name: 'Gallery section' },
-        { id: '#booking', name: 'Booking section' }
+        { id: '#offres', name: 'Services section' },
+        { id: '#social', name: 'Social section' },
+        { id: '#process', name: 'Process section' },
+        { id: '#contact', name: 'Contact section' }
       ],
       'restaurants': [
-        { id: '#menu', name: 'Menu section' },
-        { id: '#gallery', name: 'Gallery section' },
-        { id: '#booking', name: 'Booking section' }
+        { id: '#offres', name: 'Services section' },
+        { id: '#social', name: 'Social section' },
+        { id: '#process', name: 'Process section' },
+        { id: '#contact', name: 'Contact section' }
       ],
       'evenements': [
-        { id: '#packages', name: 'Packages section' },
-        { id: '#gallery', name: 'Gallery section' },
-        { id: '#booking', name: 'Booking section' }
+        { id: '#offres', name: 'Services section' },
+        { id: '#social', name: 'Social section' },
+        { id: '#process', name: 'Process section' },
+        { id: '#contact', name: 'Contact section' }
       ]
     };
     return sectionMap[page] || [];
@@ -55,9 +61,35 @@ export default function Admin() {
   ]);
 
   useEffect(() => {
-    loadPageContent(activePage);
-    loadAllPageTitles();
-  }, [activePage]);
+    if (isAuthenticated) {
+      loadPageContent(activePage);
+      loadAllPageTitles();
+    }
+  }, [activePage, isAuthenticated]);
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoginError('');
+    
+    try {
+      const response = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password })
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        setIsAuthenticated(true);
+        setPassword('');
+      } else {
+        setLoginError(result.error || 'Invalid password');
+      }
+    } catch (error) {
+      setLoginError('Login failed. Please try again.');
+    }
+  };
 
   const loadPageContent = (page: string) => {
     fetch(`/api/content/${page}`)
@@ -132,6 +164,49 @@ export default function Admin() {
     current[keys[keys.length - 1]] = value;
     setContent(newContent);
   };
+
+  // Show login form if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="max-w-md w-full bg-white rounded-lg shadow-sm p-8">
+          <div className="text-center mb-8">
+            <h1 className="text-2xl font-bold text-gray-900">Admin Access</h1>
+            <p className="text-gray-600 mt-2">Enter password to access the admin panel</p>
+          </div>
+          
+          <form onSubmit={handleLogin} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Password
+              </label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full p-3 border border-gray-300 rounded-md text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Enter admin password"
+                required
+              />
+            </div>
+            
+            {loginError && (
+              <div className="text-red-600 text-sm bg-red-50 p-3 rounded-md">
+                {loginError}
+              </div>
+            )}
+            
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+            >
+              Access Admin Panel
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   if (!content) {
     return <div className="p-8">Loading...</div>;

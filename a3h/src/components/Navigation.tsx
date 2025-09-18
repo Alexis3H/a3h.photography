@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { getMenuItems } from '../lib/menuManager';
+import { getMenuItemsSync } from '../lib/menuManager';
 
 // Default menu items for SSR
 const DEFAULT_MENU_ITEMS = [
@@ -21,7 +21,9 @@ export default function Navigation() {
   // Handle client-side hydration
   useEffect(() => {
     setIsClient(true);
-    setMenuItems(getMenuItems());
+    // Load cached menu items immediately
+    const cachedMenuItems = getMenuItemsSync();
+    setMenuItems(cachedMenuItems);
   }, []);
   
   // Listen for menu updates
@@ -29,7 +31,7 @@ export default function Navigation() {
     if (!isClient) return;
     
     const handleMenuUpdate = () => {
-      setMenuItems(getMenuItems());
+      setMenuItems(getMenuItemsSync());
     };
 
     window.addEventListener('menuUpdated', handleMenuUpdate);
@@ -52,7 +54,7 @@ export default function Navigation() {
               <Link 
                 key={item.id}
                 href={item.path} 
-                className={`px-3 py-2 text-sm font-medium ${
+                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   item.id === 'contact' 
                     ? 'bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800'
                     : 'text-gray-700 hover:text-gray-900'
@@ -88,7 +90,7 @@ export default function Navigation() {
                 <Link 
                   key={item.id}
                   href={item.path} 
-                  className={`block px-3 py-2 text-base font-medium ${
+                  className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                     item.id === 'contact' 
                       ? 'bg-gray-900 text-white rounded-md hover:bg-gray-800'
                       : 'text-gray-700 hover:text-gray-900'

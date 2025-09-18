@@ -22,19 +22,19 @@
       },
       "images": [
         {
-          "src": "/event1.jpg",
+          "src": "/uploads/P6270284.jpg",
           "alt": "Événement privé",
           "focusPoint": "center",
           "zoom": 1
         },
         {
-          "src": "/event2.jpg",
+          "src": "/uploads/P6270398.jpg",
           "alt": "Fête de famille",
           "focusPoint": "center",
           "zoom": 1
         },
         {
-          "src": "/event3.jpg",
+          "src": "/uploads/P3010061.jpg",
           "alt": "Anniversaire",
           "focusPoint": "center",
           "zoom": 1
@@ -49,7 +49,7 @@
           "price": "490 CHF (2h)",
           "description": "Couverture discrète de votre événement, 50-80 photos retouchées, galerie privée.",
           "image": {
-            "src": "/decouverte-event.jpg",
+            "src": "/uploads/P6270284.jpg",
             "alt": "Découverte Événement",
             "focusPoint": "center",
             "zoom": 1
@@ -64,7 +64,7 @@
           "price": "790 CHF (4h)",
           "description": "Couverture complète de l'événement, 100-150 photos, portraits de famille, livraison rapide.",
           "image": {
-            "src": "/complete-event.jpg",
+            "src": "/uploads/P6270398.jpg",
             "alt": "Complète Événement",
             "focusPoint": "center",
             "zoom": 1
@@ -79,7 +79,7 @@
           "price": "1190 CHF (6h)",
           "description": "Couverture complète + portraits individuels, 200+ photos, retouches avancées, livre photo.",
           "image": {
-            "src": "/premium-event.jpg",
+            "src": "/uploads/P3010061.jpg",
             "alt": "Premium Événement",
             "focusPoint": "center",
             "zoom": 1
@@ -90,6 +90,25 @@
           }
         }
       ]
+    },
+    "social": {
+      "title": "Pack Réseaux Sociaux",
+      "description": "Des photos d'événements optimisées pour vos réseaux sociaux et votre communication.",
+      "features": [
+        "Photos optimisées pour Instagram, Facebook, LinkedIn",
+        "Plusieurs formats et orientations",
+        "Retouches naturelles et professionnelles",
+        "Livraison express J+0/J+1"
+      ],
+      "price": "À partir de 200 CHF",
+      "button": {
+        "text": "Réserver",
+        "href": "/contact"
+      },
+      "image": {
+        "src": "/uploads/_DSC4541.jpg",
+        "alt": "Pack réseaux sociaux événements"
+      }
     },
     "process": {
       "title": "Comment ça marche ?",
