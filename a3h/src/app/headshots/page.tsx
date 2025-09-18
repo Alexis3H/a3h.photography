@@ -30,7 +30,7 @@ export default function Headshots() {
         <div className="md:w-1/2 grid grid-cols-2 gap-4">
           <div className="col-span-1 h-40 bg-gray-100 rounded-lg overflow-hidden">
             <Image
-              src="/DSCF0475-2.jpg"
+              src="/uploads/DSCF0475-2.jpg"
               alt="Headshot professionnel"
               width={200}
               height={160}
@@ -39,7 +39,7 @@ export default function Headshots() {
           </div>
           <div className="col-span-1 h-40 bg-gray-100 rounded-lg overflow-hidden">
             <Image
-              src="/NDS_0040-2.jpg"
+              src="/uploads/NDS_0040-2.jpg"
               alt="Portrait professionnel"
               width={200}
               height={160}
@@ -48,7 +48,7 @@ export default function Headshots() {
           </div>
           <div className="col-span-2 h-60 bg-gray-100 rounded-lg overflow-hidden">
             <Image
-              src="/_DSC3983.jpg"
+              src="/uploads/_DSC3983.jpg"
               alt="Séance de portraits"
               width={400}
               height={240}
@@ -111,7 +111,7 @@ export default function Headshots() {
         </div>
         <div className="md:w-1/2 h-96 bg-gray-100 rounded-lg overflow-hidden">
           <Image
-            src="/_DSC4541.jpg"
+            src="/uploads/_DSC4541.jpg"
             alt="Séance de portraits professionnels"
             width={400}
             height={384}

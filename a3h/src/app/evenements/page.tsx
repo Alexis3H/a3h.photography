@@ -30,7 +30,7 @@ export default function Evenements() {
         <div className="md:w-1/2 grid grid-cols-2 gap-4">
           <div className="col-span-1 h-40 bg-gray-100 rounded-lg overflow-hidden">
             <Image
-              src="/P6270284.jpg"
+              src="/uploads/P6270284.jpg"
               alt="Événement privé"
               width={200}
               height={160}
@@ -39,7 +39,7 @@ export default function Evenements() {
           </div>
           <div className="col-span-1 h-40 bg-gray-100 rounded-lg overflow-hidden">
             <Image
-              src="/P6270398.jpg"
+              src="/uploads/P6270398.jpg"
               alt="Fête familiale"
               width={200}
               height={160}
@@ -48,7 +48,7 @@ export default function Evenements() {
           </div>
           <div className="col-span-2 h-60 bg-gray-100 rounded-lg overflow-hidden">
             <Image
-              src="/P3010061.jpg"
+              src="/uploads/P3010061.jpg"
               alt="Moment authentique"
               width={400}
               height={240}
@@ -112,7 +112,7 @@ export default function Evenements() {
         </div>
         <div className="md:w-1/2 h-96 bg-gray-100 rounded-lg overflow-hidden">
           <Image
-            src="/P3010418.jpg"
+            src="/uploads/P3010418.jpg"
             alt="Événement familial authentique"
             width={400}
             height={384}

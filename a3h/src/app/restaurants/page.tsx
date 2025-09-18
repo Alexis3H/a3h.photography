@@ -30,7 +30,7 @@ export default function Restaurants() {
         <div className="md:w-1/2 grid grid-cols-2 gap-4">
           <div className="col-span-1 h-40 bg-gray-100 rounded-lg overflow-hidden">
             <Image
-              src="/DSCF3687.jpg"
+              src="/uploads/DSCF3687.jpg"
               alt="Photographie culinaire"
               width={200}
               height={160}
@@ -39,7 +39,7 @@ export default function Restaurants() {
           </div>
           <div className="col-span-1 h-40 bg-gray-100 rounded-lg overflow-hidden">
             <Image
-              src="/DSCF3898.jpg"
+              src="/uploads/DSCF3898.jpg"
               alt="Plats stylisés"
               width={200}
               height={160}
@@ -48,7 +48,7 @@ export default function Restaurants() {
           </div>
           <div className="col-span-2 h-60 bg-gray-100 rounded-lg overflow-hidden">
             <Image
-              src="/DSCF6573.jpg"
+              src="/uploads/DSCF6573.jpg"
               alt="Ambiance restaurant"
               width={400}
               height={240}
@@ -109,7 +109,7 @@ export default function Restaurants() {
         </div>
         <div className="md:w-1/2 h-96 bg-gray-100 rounded-lg overflow-hidden">
           <Image
-            src="/_DSC5340.jpg"
+            src="/uploads/_DSC5340.jpg"
             alt="Photographie culinaire professionnelle"
             width={400}
             height={384}
